@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Cinzel_Decorative, Cormorant_Garamond, Fira_Code } from 'next/font/google';
 import Link from 'next/link';
+import MysticEmbers from './components/MysticEmbers';
 import './globals.css';
 
 const cinzelDecorative = Cinzel_Decorative({
@@ -43,6 +44,12 @@ export default function RootLayout({
           mixBlendMode: 'multiply'
         }}></div>
 
+        {/* Deep Vignette overlay for richer, darker vibe */}
+        <div className="pointer-events-none fixed inset-0 z-0" style={{
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 30%, rgba(27,49,37,0.3) 100%)',
+          mixBlendMode: 'multiply'
+        }}></div>
+
         {/* Background Mural Overlay */}
         <div className="pointer-events-none fixed inset-0 z-0" style={{ mixBlendMode: 'multiply', opacity: 0.15 }}>
           <img 
@@ -51,6 +58,9 @@ export default function RootLayout({
             src="https://hermes-agent.nousresearch.com/_next/static/media/filler-bg0.7368f8a1.jpg" 
           />
         </div>
+
+        {/* Floating Particles */}
+        <MysticEmbers />
         
         {/* Main Content */}
         <main className="relative z-10 w-full min-h-screen border-x border-accent-teal/40 mx-auto max-w-[1600px] flex flex-col">
