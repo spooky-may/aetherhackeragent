@@ -104,6 +104,7 @@ body {
   padding: 16px;
   overflow-y: auto;
   max-height: 400px;
+  text-shadow: 0 0 4px rgba(0, 221, 102, 0.4);
 }
 
 .terminal-line {
@@ -186,7 +187,7 @@ body {
 /* Mystic Embers Particle System */
 @keyframes float-ember {
   0% {
-    transform: translateY(10vh) translateX(0);
+    transform: translate(calc(var(--mouse-x, 0px) * 0.1), 10vh);
     opacity: 0;
   }
   20% {
@@ -196,7 +197,7 @@ body {
     opacity: var(--ember-opacity);
   }
   100% {
-    transform: translateY(-110vh) translateX(var(--ember-drift));
+    transform: translate(calc(var(--ember-drift) + (var(--mouse-x, 0px) * 0.5)), -110vh);
     opacity: 0;
   }
 }
@@ -204,4 +205,5 @@ body {
 .animate-ember {
   animation: float-ember linear infinite;
   box-shadow: 0 0 12px 1px currentColor;
+  transition: transform 0.5s ease-out;
 }
