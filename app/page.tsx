@@ -8,9 +8,9 @@ export default function Home() {
         <div className="w-40 h-40 rounded-full overflow-hidden ornamental-border mb-2 shadow-xl relative group">
            {/* Halo glow behind mascot */}
            <div className="absolute inset-0 bg-divine-green/20 blur-2xl rounded-full z-[-1]"></div>
-           {/* Creepy Theme Overlay */}
-           <div className="absolute inset-0 bg-godteal/70 mix-blend-multiply z-10 pointer-events-none transition-opacity duration-700 group-hover:opacity-40"></div>
-          <img src="/refrence/logo.jpeg" alt="Goddess Mascot" className="w-full h-full object-cover grayscale contrast-[1.4] brightness-[0.7] transition-transform duration-700 group-hover:scale-105" />
+           {/* Creepy Theme Overlay - Lightened */}
+           <div className="absolute inset-0 bg-godteal/30 mix-blend-multiply z-10 pointer-events-none transition-opacity duration-700 group-hover:opacity-10"></div>
+          <img src="/refrence/logo.jpeg" alt="Goddess Mascot" className="w-full h-full object-cover grayscale-[0.3] sepia-[0.2] contrast-[1.1] brightness-[0.95] transition-transform duration-700 group-hover:scale-105" />
         </div>
         <div>
           <small className="font-sans text-[0.6875rem] tracking-[0.1875rem] mb-6 opacity-60 uppercase block text-godteal font-bold">
