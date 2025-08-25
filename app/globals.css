@@ -204,6 +204,6 @@ body {
 
 .animate-ember {
   animation: float-ember linear infinite;
-  box-shadow: 0 0 12px 1px currentColor;
+  box-shadow: 0 0 16px 3px currentColor; /* Increased glow */
   transition: transform 0.5s ease-out;
 }

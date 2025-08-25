@@ -22,10 +22,10 @@ export default function MysticEmbers() {
       return {
         id: i,
         left: `${Math.random() * 100}vw`,
-        size: isWisp ? Math.random() * 20 + 10 : Math.random() * 3 + 1, // Noticeable embers
+        size: isWisp ? Math.random() * 25 + 15 : Math.random() * 4 + 2, // Noticeable larger embers
         delay: `${Math.random() * 10}s`,
         duration: isWisp ? `${15 + Math.random() * 20}s` : `${10 + Math.random() * 15}s`, // Faster, like rising heat
-        opacity: isWisp ? Math.random() * 0.15 + 0.05 : Math.random() * 0.4 + 0.2, // Much more visible
+        opacity: isWisp ? Math.random() * 0.25 + 0.15 : Math.random() * 0.6 + 0.4, // Heavy, eye-catching opacity
         drift: `${(Math.random() - 0.5) * (isWisp ? 200 : 100)}px`, // Sway in the thermal updraft
         blur: isWisp ? 'blur(8px)' : 'blur(0.5px)', // Sharper embers, distinct wisps
         color: colorClass,
