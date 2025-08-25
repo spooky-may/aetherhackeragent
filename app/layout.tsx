@@ -67,8 +67,9 @@ export default function RootLayout({
           {/* Global Header */}
           <header className="w-full border-b border-accent-teal/40 p-6 flex justify-between items-center backdrop-blur-sm bg-white/20">
             <Link href="/" className="flex items-center gap-4 group">
-              <div className="w-10 h-10 rounded-sm overflow-hidden ornamental-border shrink-0 group-hover:shadow-lg transition-shadow">
-                <img src="/refrence/logo.jpeg" alt="Goddess Mascot" className="w-full h-full object-cover" />
+              <div className="w-10 h-10 rounded-sm overflow-hidden ornamental-border shrink-0 group-hover:shadow-lg transition-shadow relative">
+                <div className="absolute inset-0 bg-godteal/50 mix-blend-multiply z-10 pointer-events-none transition-opacity group-hover:opacity-20"></div>
+                <img src="/refrence/logo.jpeg" alt="Goddess Mascot" className="w-full h-full object-cover grayscale contrast-[1.2] brightness-75" />
               </div>
               <h2 className="font-expanded text-xl tracking-widest text-godteal uppercase font-bold group-hover:text-accent-teal transition-colors">Aether Agent</h2>
             </Link>

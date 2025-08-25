@@ -113,7 +113,7 @@ export default function Catalog() {
 
         {/* Grid */}
         {paginatedSkills.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 flex-1">
+          <div key={`${selectedCategory}-${currentPage}`} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 flex-1 animate-mystic-reveal">
             {paginatedSkills.map((skill: Skill) => (
               <Link key={skill.id} href={`/skill/${skill.id}`} className="block group">
                 <div className="skill-card h-full flex flex-col justify-between border border-accent-teal/30 bg-white/40 shadow-sm hover:shadow-lg rounded-sm p-6 lg:p-8">
