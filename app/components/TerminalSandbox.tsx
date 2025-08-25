@@ -63,16 +63,16 @@ export default function TerminalSandbox({ command, output }: TerminalSandboxProp
         <div className="flex items-center justify-between pb-2 border-b border-accent-teal/30">
           <div className="flex items-center gap-3">
             <div className="flex gap-1.5">
-              <span className="inline-block w-2.5 h-2.5 rounded-full bg-divine-green opacity-60"></span>
-              <span className="inline-block w-2.5 h-2.5 rounded-full bg-divine-green/40"></span>
-              <span className="inline-block w-2.5 h-2.5 rounded-full bg-divine-green/20"></span>
+              <span className="inline-block w-2.5 h-2.5 rounded-full bg-accent-teal opacity-60"></span>
+              <span className="inline-block w-2.5 h-2.5 rounded-full bg-accent-teal/40"></span>
+              <span className="inline-block w-2.5 h-2.5 rounded-full bg-accent-teal/20"></span>
             </div>
-            <span className="text-xs font-courier text-divine-green/70">Aether Conduit</span>
+            <span className="text-xs font-courier text-accent-teal/70">Aether Conduit</span>
           </div>
           {!hasStarted && (
             <button 
               onClick={startDemo}
-              className="text-[0.625rem] font-sans tracking-widest uppercase bg-divine-green/10 text-divine-green px-2 py-1 rounded-sm border border-divine-green/30 hover:bg-divine-green/20 transition-colors"
+              className="text-[0.625rem] font-sans tracking-widest uppercase bg-godteal/10 text-godteal px-3 py-1.5 rounded-sm border border-godteal/30 hover:bg-godteal hover:text-parchment transition-all duration-300 shadow-sm hover:shadow-[0_0_12px_rgba(27,49,37,0.3)]"
             >
               Invoke Ritual
             </button>
@@ -80,7 +80,7 @@ export default function TerminalSandbox({ command, output }: TerminalSandboxProp
         </div>
 
         {/* Command Line */}
-        <div className="text-xs font-courier text-divine-green mt-3 break-all">
+        <div className="text-xs font-courier text-accent-teal mt-3 break-all">
           $ {command}
         </div>
       </div>
@@ -92,7 +92,7 @@ export default function TerminalSandbox({ command, output }: TerminalSandboxProp
       >
         {!hasStarted ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-[2px]">
-             <p className="font-courier text-xs text-divine-green/70 mb-4 text-center px-4">
+             <p className="font-courier text-xs text-accent-teal/70 mb-4 text-center px-4">
                The conduit is attuned. Awaiting your directive to manifest the skill.
              </p>
              <button 

@@ -158,6 +158,10 @@ body {
   }
 
   .btn-divine {
-    @apply px-6 py-3 border border-godteal text-parchment bg-godteal font-sans uppercase text-[0.6875rem] tracking-[0.1875rem] hover:bg-opacity-90 hover:shadow-md transition-smooth cursor-pointer;
+    @apply px-6 py-3 border border-godteal text-parchment bg-godteal font-sans uppercase text-[0.6875rem] tracking-[0.1875rem] transition-smooth cursor-pointer;
+  }
+  .btn-divine:hover {
+    @apply bg-opacity-90;
+    box-shadow: 0 0 16px 2px rgba(27, 49, 37, 0.4);
   }
 }

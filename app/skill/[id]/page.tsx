@@ -83,10 +83,9 @@ export default async function SkillPage({ params }: SkillParams) {
                 key={idx}
                 className="font-mondwest text-xl opacity-90 text-godteal flex items-start gap-4 p-6 border border-accent-teal/40 bg-white/40 shadow-sm"
               >
-                <span className="text-divine-green text-lg mt-0.5">✦</span>
+                <span className="text-accent-teal text-lg mt-0.5">✦</span>
                 <span className="leading-relaxed">{feature}</span>
-              </li>
-            ))}
+              </li>            ))}
           </ul>
         </div>
 
