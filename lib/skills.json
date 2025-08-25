@@ -1,0 +1,199 @@
+[
+  {
+    "id": "skill-nmap",
+    "name": "Nmap",
+    "category": "Information Gathering",
+    "overview": {
+      "short_desc": "The industry-standard network mapper and security scanner for discovering hosts, services, and vulnerabilities on computer networks.",
+      "long_desc": "Nmap (Network Mapper) operates as a versatile network discovery and security auditing utility designed to systematically explore network topologies and identify active hosts, open ports, running services, and potential security vulnerabilities. At its core, Nmap utilizes raw IP packets to determine which hosts are available on a network, what services those hosts are offering, what operating systems they are running, and what type of packet filters or firewalls are in use. The tool employs a sophisticated stateful inspection mechanism that analyzes response patterns from target systems to fingerprint operating systems and services with remarkable accuracy.\n\nThe scanning methodology implemented by Nmap encompasses multiple advanced techniques including TCP SYN scan (half-open scanning), TCP connect scan, UDP scan, FIN scan, Xmas scan, Null scan, and Idle scan (zombie-based). Each technique exploits specific behaviors in the TCP/IP stack implementation of target systems, allowing security professionals to gather intelligence while avoiding detection by basic intrusion detection systems. Nmap's script engine (NSE) extends functionality through Lua-based scripts capable of detecting vulnerabilities, performing brute-force attacks, detecting malware, and conducting exhaustive enumeration of discovered services. The output can be formatted as normal human-readable output, XML for programmatic processing, grepable output for shell parsing, and JSON for modern DevOps integration.\n\nNmap's architecture is designed for maximum flexibility and extensibility, supporting parallel scanning, timing templates ranging from paranoid to insane, version detection with comprehensive service fingerprinting databases, and aggressive detection modes that combine multiple techniques for comprehensive reconnaissance. The tool maintains compatibility with virtually all operating systems including Linux, Windows, macOS, and BSD variants, making it the de facto standard for network reconnaissance in both offensive security assessments and defensive network monitoring operations.",
+      "features": [
+        "Port scanning with 10+ different scan techniques (SYN, TCP, UDP, FIN, Xmas, Null, Idle, SCTP, etc.)",
+        "OS fingerprinting using TCP/IP stack behavior analysis with 2,600+ known fingerprints",
+        "Service and version detection with comprehensive protocol and application fingerprinting",
+        "NSE (Nmap Scripting Engine) with 600+ pre-written scripts for vulnerability detection and exploitation",
+        "Traceroute analysis using ICMP time-exceeded and TCP SYN probes",
+        "Flexible target specification supporting IP addresses, hostnames, CIDR notation, and input lists",
+        "IPv6 scanning capabilities for modern network environments",
+        "Output formats: Normal, XML, Grepable, and JSON for integration with security orchestration tools"
+      ]
+    },
+    "technical_specs": {
+      "language": "C, C++, Lua (NSE scripts)",
+      "license": "GPLv2",
+      "difficulty": "Intermediate"
+    },
+    "sandbox_simulation": {
+      "trigger_command": "nmap -A -T4 scanme.nmap.org",
+      "mock_output": [
+        "Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-01-15 09:23:45 UTC",
+        "[DELAY-800] Nmap scan report for scanme.nmap.org (45.33.32.156)",
+        "Host is up (0.052s latency).",
+        "Not shown: 993 closed tcp ports (reset)",
+        "[DELAY-1200] PORT      STATE    SERVICE    VERSION",
+        "22/tcp    open     ssh        OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)",
+        "[DELAY-600] 80/tcp    open     http       Apache httpd 2.4.54 (Debian)",
+        "[DELAY-900] |_http-title: Did not follow redirect to https://scanme.nmap.org/",
+        "443/tcp   open     ssl/https  Apache httpd 2.4.54",
+        "[DELAY-700] |_http-title: Nmap Scanme",
+        "| ssl-cert: Subject: commonName=*.scanme.nmap.org",
+        "[DELAY-500] | Issuer: commonName=R3/organizationName=Let's Encrypt",
+        "9929/tcp  open     nping-echo Nping echo",
+        "[DELAY-600] 31337/tcp open     tcpwrapped",
+        "[DELAY-1500] OS details: Linux 5.4 - 5.6 (93% accuracy)",
+        "[DELAY-800] Network Distance: 11 hops",
+        "[DELAY-2000] TRACEROUTE (using port 443/tcp)",
+        "HOP RTT    ADDRESS",
+        "1   2.34   192.168.1.1",
+        "2   12.45  10.0.0.1",
+        "[DELAY-1000] 3   23.67   172.16.45.2",
+        "4   34.89  203.0.113.1",
+        "[DELAY-800] 5   45.12   198.51.100.1",
+        "6   56.34  162.158.0.1",
+        "[DELAY-1200] 7   67.89   45.33.32.156",
+        "[DELAY-500] OS and Service detection performed. Consider adding -O for more fingerprinting.",
+        "[DELAY-300] Nmap done: 1 IP address (1 host up) scanned in 18.45 seconds"
+      ]
+    },
+    "download_script": {
+      "filename": "install-nmap.sh",
+      "content": "#!/bin/bash\necho 'Nmap installation script'"
+    },
+    "tags": ["network-scanner", "port-scanner", "reconnaissance", "vulnerability-assessment"],
+    "author": "MiniMax Agent",
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2024-01-15T09:00:00Z"
+  },
+  {
+    "id": "skill-sqlmap",
+    "name": "SQLMap",
+    "category": "Web Attack",
+    "overview": {
+      "short_desc": "An open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over database servers.",
+      "long_desc": "SQLMap is an advanced, open-source penetration testing tool written in Python that automates the detection, exploitation, and takeover of database servers vulnerable to SQL injection attacks.",
+      "features": [
+        "Automated detection of 6 SQL injection types: boolean-based blind, time-based blind, error-based, UNION query, stacked queries, and out-of-band",
+        "Comprehensive DBMS fingerprinting for 30+ database systems"
+      ]
+    },
+    "technical_specs": {
+      "language": "Python 3",
+      "license": "GPLv2",
+      "difficulty": "Advanced"
+    },
+    "sandbox_simulation": {
+      "trigger_command": "sqlmap -u https://target.example.com/product.php?id=5 --dbs --batch",
+      "mock_output": [
+        "[09:24:15] [INFO] testing connection to the target URL",
+        "[DELAY-800] [INFO] checking if the target is protected",
+        "[09:24:16] [INFO] heuristics detected web application firewall"
+      ]
+    },
+    "download_script": {
+      "filename": "install-sqlmap.sh",
+      "content": "#!/bin/bash\necho 'SQLMap installation script'"
+    },
+    "tags": ["sql-injection", "web-scanner", "database-hacking", "web-attack"],
+    "author": "MiniMax Agent",
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2024-01-15T09:00:00Z"
+  },
+  {
+    "id": "skill-wifite",
+    "name": "Wifite2",
+    "category": "Wireless Attack",
+    "overview": {
+      "short_desc": "An automated wireless attack tool that simplifies the process of auditing WiFi networks by handling WEP, WPA, WPA2, and WPA3 cracking with minimal user interaction.",
+      "long_desc": "Wifite2 is a sophisticated automated wireless network auditing tool designed to streamline the process of security testing for WiFi networks.",
+      "features": [
+        "Fully automated WiFi auditing with zero user input during attack execution",
+        "Multi-interface support for parallel attacks on multiple access points"
+      ]
+    },
+    "technical_specs": {
+      "language": "Python 3",
+      "license": "GPLv3",
+      "difficulty": "Intermediate"
+    },
+    "sandbox_simulation": {
+      "trigger_command": "wifite --interface wlan0mon --attack-all",
+      "mock_output": [
+        "[09:25:01] [+] Starting Wifite2 automated wireless attack",
+        "[09:25:01] [+] Using interface: wlan0 (driver: rt2800usb)"
+      ]
+    },
+    "download_script": {
+      "filename": "install-wifite.sh",
+      "content": "#!/bin/bash\necho 'Wifite installation script'"
+    },
+    "tags": ["wireless-attack", "wifi-hacking", "wpa-cracking", "wep-cracking"],
+    "author": "MiniMax Agent",
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2024-01-15T09:00:00Z"
+  },
+  {
+    "id": "skill-msfvenom",
+    "name": "MSFvenom",
+    "category": "Payload Creation",
+    "overview": {
+      "short_desc": "The unified payload generator and encoder component of the Metasploit Framework, capable of creating shellcode, executables, and backdoors.",
+      "long_desc": "MSFvenom is the primary payload generation engine within the Metasploit Framework.",
+      "features": [
+        "Unified payload generation for 30+ platforms",
+        "Multi-stage payload architecture with stager/stage separation"
+      ]
+    },
+    "technical_specs": {
+      "language": "Ruby (Metasploit Framework)",
+      "license": "BSD-3-Clause",
+      "difficulty": "Advanced"
+    },
+    "sandbox_simulation": {
+      "trigger_command": "msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=192.168.1.100 LPORT=4444 -f elf",
+      "mock_output": [
+        "[*] Generating payload: linux/x64/meterpreter/reverse_tcp",
+        "[DELAY-800] [*] Payload size: 1106 bytes"
+      ]
+    },
+    "download_script": {
+      "filename": "install-msfvenom.sh",
+      "content": "#!/bin/bash\necho 'MSFvenom installation script'"
+    },
+    "tags": ["payload-generator", "shellcode", "meterpreter", "exploit-development"],
+    "author": "MiniMax Agent",
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2024-01-15T09:00:00Z"
+  },
+  {
+    "id": "skill-hashcat",
+    "name": "Hashcat",
+    "category": "Password Attacks",
+    "overview": {
+      "short_desc": "The world's fastest and most advanced password recovery utility, utilizing GPU acceleration to crack hashed passwords.",
+      "long_desc": "Hashcat stands as the preeminent GPU-accelerated password cracking tool.",
+      "features": [
+        "World's fastest password recovery with GPU acceleration via OpenCL and CUDA",
+        "Support for 300+ hash algorithms"
+      ]
+    },
+    "technical_specs": {
+      "language": "C",
+      "license": "MIT",
+      "difficulty": "Intermediate"
+    },
+    "sandbox_simulation": {
+      "trigger_command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt",
+      "mock_output": [
+        "hashcat () starting",
+        "[DELAY-500] OpenCL API (OpenCL 3.0 CUDA 12.2.0) - Platform #1"
+      ]
+    },
+    "download_script": {
+      "filename": "install-hashcat.sh",
+      "content": "#!/bin/bash\necho 'Hashcat installation script'"
+    },
+    "tags": ["password-cracking", "hash-cracking", "gpu-acceleration", "brute-force"],
+    "author": "MiniMax Agent",
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2024-01-15T09:00:00Z"
+  }
+]
