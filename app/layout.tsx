@@ -40,13 +40,13 @@ export default function RootLayout({
 
         {/* Radial Gradients overlay */}
         <div className="pointer-events-none fixed inset-0 z-0" style={{
-          background: 'radial-gradient(ellipse at 50% 0%, rgba(23, 162, 162, 0.1) 0%, rgba(255, 230, 203, 0) 70%)',
+          background: 'radial-gradient(ellipse at 50% 0%, rgba(23, 162, 162, 0.08) 0%, rgba(255, 230, 203, 0) 70%)',
           mixBlendMode: 'multiply'
         }}></div>
 
-        {/* Deep Vignette overlay for richer, darker vibe at the corners */}
+        {/* Softened Vignette overlay for an aged parchment edge vibe */}
         <div className="pointer-events-none fixed inset-0 z-0" style={{
-          background: 'radial-gradient(circle at center, transparent 30%, rgba(27,49,37,0.4) 75%, rgba(4,28,28,0.9) 100%)',
+          background: 'radial-gradient(circle at center, transparent 40%, rgba(27,49,37,0.15) 80%, rgba(15,30,20,0.6) 100%)',
           mixBlendMode: 'multiply'
         }}></div>
 
