@@ -21,6 +21,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(27, 49, 37, 0.1); 
+  border-left: 1px solid rgba(23, 162, 162, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(27, 49, 37, 0.6); 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6); /* divine-gold */
+}
+
 /* Ambient Grain/Noise - Adjusted for light background */
 .bg-noise {
   position: fixed;

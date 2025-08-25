@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export default function MysticEmbers() {
   const [mounted, setMounted] = useState(false);
   const [particles, setParticles] = useState<any[]>([]);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Dragon-fire embers and thick volcanic ash
@@ -27,18 +28,32 @@ export default function MysticEmbers() {
         opacity: isWisp ? Math.random() * 0.15 + 0.05 : Math.random() * 0.4 + 0.2, // Much more visible
         drift: `${(Math.random() - 0.5) * (isWisp ? 200 : 100)}px`, // Sway in the thermal updraft
         blur: isWisp ? 'blur(8px)' : 'blur(0.5px)', // Sharper embers, distinct wisps
-        color: colorClass
+        color: colorClass,
+        depth: Math.random() * 0.8 + 0.2 // Depth for parallax sway (0.2 to 1.0 multiplier)
       };
     });
 
     setParticles(newParticles);
     setMounted(true);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (containerRef.current) {
+        // Calculate offset from center (-1 to 1)
+        const x = (e.clientX / window.innerWidth - 0.5) * 2;
+        
+        // Update CSS variable for interactive parallax sway
+        containerRef.current.style.setProperty('--mouse-x', `${x * 250}px`);
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   if (!mounted) return null;
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden mix-blend-screen opacity-100">
+    <div ref={containerRef} className="fixed inset-0 z-0 pointer-events-none overflow-hidden mix-blend-screen opacity-100 transition-transform duration-700 ease-out">
       {particles.map(p => (
         <div
           key={p.id}
@@ -52,6 +67,7 @@ export default function MysticEmbers() {
             filter: p.blur,
             '--ember-opacity': p.opacity,
             '--ember-drift': p.drift,
+            marginLeft: `calc(var(--mouse-x, 0px) * ${p.depth * -1})`, // Inverse sway based on mouse position and depth
           } as React.CSSProperties}
         />
       ))}
