@@ -7,23 +7,26 @@ export default function MysticEmbers() {
   const [particles, setParticles] = useState<any[]>([]);
 
   useEffect(() => {
-    // Subtle, Elder Scrolls-like dust motes and faint ancient wisps.
-    // Reduced count and removed neon colors for a mature aesthetic.
-    const newParticles = Array.from({ length: 25 }).map((_, i) => {
+    // Dragon-fire embers and thick volcanic ash
+    // Increased count and visibility for the "Elder Scrolls Dragon" vibe.
+    const newParticles = Array.from({ length: 65 }).map((_, i) => {
       const isWisp = i % 5 === 0;
       
-      // Muted, ancient gold/ash tones only. No bright teal.
-      const colorClass = Math.random() > 0.5 ? 'text-divine-gold bg-divine-gold' : 'text-parchment bg-parchment';
+      // Mix of fiery orange, deep crimson, and ancient gold
+      const rand = Math.random();
+      let colorClass = 'text-divine-gold bg-divine-gold';
+      if (rand > 0.7) colorClass = 'text-dragon-fire bg-dragon-fire';
+      else if (rand > 0.4) colorClass = 'text-dragon-blood bg-dragon-blood';
       
       return {
         id: i,
         left: `${Math.random() * 100}vw`,
-        size: isWisp ? Math.random() * 30 + 15 : Math.random() * 1.5 + 0.5, // Much smaller embers, softer wisps
-        delay: `${Math.random() * 20}s`,
-        duration: isWisp ? `${40 + Math.random() * 40}s` : `${20 + Math.random() * 30}s`, // Very slow drifting
-        opacity: isWisp ? Math.random() * 0.05 + 0.02 : Math.random() * 0.15 + 0.05, // Barely visible
-        drift: `${(Math.random() - 0.5) * (isWisp ? 150 : 80)}px`, // Gentle sway
-        blur: isWisp ? 'blur(16px)' : 'blur(0.5px)', // Softened edges
+        size: isWisp ? Math.random() * 20 + 10 : Math.random() * 3 + 1, // Noticeable embers
+        delay: `${Math.random() * 10}s`,
+        duration: isWisp ? `${15 + Math.random() * 20}s` : `${10 + Math.random() * 15}s`, // Faster, like rising heat
+        opacity: isWisp ? Math.random() * 0.15 + 0.05 : Math.random() * 0.4 + 0.2, // Much more visible
+        drift: `${(Math.random() - 0.5) * (isWisp ? 200 : 100)}px`, // Sway in the thermal updraft
+        blur: isWisp ? 'blur(8px)' : 'blur(0.5px)', // Sharper embers, distinct wisps
         color: colorClass
       };
     });
@@ -35,7 +38,7 @@ export default function MysticEmbers() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden mix-blend-screen opacity-70">
+    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden mix-blend-screen opacity-100">
       {particles.map(p => (
         <div
           key={p.id}

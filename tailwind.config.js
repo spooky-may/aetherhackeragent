@@ -13,6 +13,8 @@ module.exports = {
         'divine-green': '#00dd66',
         'sacred-purple': '#b74a9e',
         'divine-gold': '#d4af37',
+        'dragon-fire': '#e65c00',
+        'dragon-blood': '#8b0000',
       },
       fontFamily: {
         expanded: ['var(--font-cinzel-decorative)', 'serif'],
