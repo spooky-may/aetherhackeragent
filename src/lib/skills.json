@@ -8100,7 +8100,7 @@
     "category": "IoT Tools",
     "overview": {
       "short_desc": "The leading iot tools tool for security professionals and penetration testers.",
-       "Firmadyne is a powerful iot tools tool designed for security professionals and penetration testers. It provides comprehensive functionality for conducting security assessments, vulnerability scanning, and exploit development. The tool features advanced algorithms and techniques that enable security researchers to identify weaknesses in target systems and networks. With its modular architecture and extensible framework, Firmadyne supports various plugins and custom scripts that extend its capabilities to meet specific testing requirements. The tool is widely used in red team operations, penetration testing engagements, and security research projects worldwide. It includes detailed documentation and community support for both beginners and experienced security professionals.",
+      "long_desc": "Firmadyne is a powerful iot tools tool designed for security professionals and penetration testers. It provides comprehensive functionality for conducting security assessments, vulnerability scanning, and exploit development. The tool features advanced algorithms and techniques that enable security researchers to identify weaknesses in target systems and networks. With its modular architecture and extensible framework, Firmadyne supports various plugins and custom scripts that extend its capabilities to meet specific testing requirements. The tool is widely used in red team operations, penetration testing engagements, and security research projects worldwide. It includes detailed documentation and community support for both beginners and experienced security professionals.",
       "features": [
         "Advanced Firmadyne functionality for comprehensive security testing",
         "Intuitive command-line interface with comprehensive help documentation",
@@ -8113,7 +8113,7 @@
     "technical_specs": {
       "language": "Python",
       "license": "GPL",
-      "difficult  "difficulty": "Advanced"
+      "difficulty": "Advanced"
     },
     "sandbox_simulation": {
       "trigger_command": "firmadyne --help",
@@ -8192,11 +8192,10 @@
     ],
     "author": "MiniMax Agent",
     "created_at": "2024-01-15T09:00:00Z",
-    "updated01-15T09:00:00Z"
+    "updated_at": "2024-01-15T09:00:00Z"
   },
   {
     "id": "skill-binwalk-iot",
-   k-iot",
     "name": "Binwalk",
     "category": "IoT Tools",
     "overview": {
@@ -8267,7 +8266,8 @@
       "difficulty": "Advanced"
     },
     "sandbox_simulation": {
-      "trigger_command": "avatar2     "mock_output": [
+      "trigger_command": "avatar2 --target example.com",
+      "mock_output": [
         "Avatar2 () starting",
         "",
         "[DELAY-500] [*] Initializing {name} module",
@@ -8275,7 +8275,6 @@
         "[DELAY-600] [*] Executing command: avatar2 --target example.com",
         "[DELAY-1000] [+] Processing target information...",
         "[DELAY-800] [*] Scanning target systems",
-  ystems",
         "[DELAY-1200] [+] Results found and logged to output file",
         "[DELAY-500] [INFO] Operation completed successfully",
         ""
@@ -8382,8 +8381,8 @@
       ]
     },
     "download_script": {
-      "filtall-iot-scanner.sh",
-      "content": "#!/bin/bash\n# Automated Deployment Script for IoT Scanner\n# Version: 1.0.0\n# Categor0\n# Category: IoT Tools\n\nset -e\n\necho -e \"\\u001b[1;34m[*] Initializing IoT Scanner deployment environment...\\u001b[0m\"\necho -e \"\\u001b[1;34m[*] Target Architecture: $(uname -m)\\u001b[0m\"\necho -e \"\\u001b[1;34m[*] Operating System: $(lsb_release -ds 2>/dev/null || cat /etc/os-release | grep PRETTY_NAME | cut -d'\"'\"'\"'\"'\"' -f2)\\u001b[0m\"\n\n# Update package repositories\necho -e \"\\u001b[1;33m[*] Updating package repositories...\\u001b[0m\"\nsudo apt-get update -qq\n\n# Install system dependencies\necho -e \"\\u001b[1;33m[*] Installing system dependencies...\\u001b[0m\"\nsudo apt-get install -y \\\n    build-essential \\\n    git \\\n    curl \\\n    wget \\\n    python3 \\\n    python3-pip \\\n    python3-venv \\\n    libssl-dev \\\n    libpcap-dev \\\n    2>/dev/null\n\n# Check if IoT Scanner is already installed\nif command -v iot-scanner &> /dev/null; then\n    echo -e \"\\u001b[1;32m[+] IoT Scanner detected. Version check...\\u001b[0m\"\nfi\n\n# Create installation directory\nINSTALL_DIR=\"/opt/iot-scanner\"\necho -e \"\\u001b[1;34m[*] Preparing installation directory: $INSTALL_DIR\\u001b[0m\"\nsudo mkdir -p \"$INSTALL_DIR\"\ncd \"$INSTALL_DIR\"\n\n# Clone repository\necho -e \"\\u001b[1;34m[*] Fetching IoT Scanner source code from GitHub...\\u001b[0m\"\nif [ -d \".git\" ]; then\n    git pull origin master --quiet\nelse\n    git clone https://github.com/example/iot-scanner.git .\nfi\n\n# Configure and install\necho -e \"\\u001b[1;33m[*] Building IoT Scanner...\\u001b[0m\"\nchmod +x setup.py configure.py 2>/dev/null || true\n\n# Try various installation methods\nif [ -f \"setup.py\"  sudo python3 setup.py install 2>/dev/null || sudo pip3 install .\nelif [ -f \"pyproject.toml\" ]; then\n    sudo pip3 install -e .\nelif [ -f \"Makefile\" ]; then\n    sudo make install\nelse\n    echo -e \"\\u001b[1;33m[*] Creating symbolic link for direct access...\\u001b[0m\"\n    chmod +x iot-scanner.py iot-scanner 2>/dev/null || true\nfi\n\n# Create symbolic link\nsudo ln -sf \"$INSTALL_DIR/iot-scanner\" /usr/local/bin/iot-scanner 2>/dev/null || true\n\n# Verify installation\necho -e \"\\u001b[1;36m[*] Verifying IoT Scanner installation...\\u001b[0m\"\niot-scanner --version 2>/dev/null || echo \"IoT Scanner binary installed\"\n\necho -e \"\\n\\u001b[1;32m\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\\u001b[0m\"\necho -e \"\\u001b[1;32m\u2551       [+ Deployment Complete - IoT Scanner Ready]                 \u2551\\u001b[0m\"\necho -e \"\\u001b[1;32m\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\\u001b[0m\"\necho -e \"\\u001b[1;32m[+] Installation path: $INSTALL_DIR\\u001b[0m\"\necho -e \"\\u001b[1;32m[+] Access via: iot-scanner (command line)\\u001b[0m\"\necho -e \"\\u001b[1;32m[+] Try: iot-scanner --help\\u001b[0m\"\necho -e \"\\u001b[1;32m[+] IoT Scanner deployment complete. Skill is now active.\\u001b[0m\"\n"
+      "filename": "install-iot-scanner.sh",
+      "content": "#!/bin/bash\n# Automated Deployment Script for IoT Scanner\n# Version: 1.0.0\n# Category: IoT Tools\n# Category: IoT Tools\n\nset -e\n\necho -e \"\\u001b[1;34m[*] Initializing IoT Scanner deployment environment...\\u001b[0m\"\necho -e \"\\u001b[1;34m[*] Target Architecture: $(uname -m)\\u001b[0m\"\necho -e \"\\u001b[1;34m[*] Operating System: $(lsb_release -ds 2>/dev/null || cat /etc/os-release | grep PRETTY_NAME | cut -d'\"'\"'\"'\"'\"' -f2)\\u001b[0m\"\n\n# Update package repositories\necho -e \"\\u001b[1;33m[*] Updating package repositories...\\u001b[0m\"\nsudo apt-get update -qq\n\n# Install system dependencies\necho -e \"\\u001b[1;33m[*] Installing system dependencies...\\u001b[0m\"\nsudo apt-get install -y \\\n    build-essential \\\n    git \\\n    curl \\\n    wget \\\n    python3 \\\n    python3-pip \\\n    python3-venv \\\n    libssl-dev \\\n    libpcap-dev \\\n    2>/dev/null\n\n# Check if IoT Scanner is already installed\nif command -v iot-scanner &> /dev/null; then\n    echo -e \"\\u001b[1;32m[+] IoT Scanner detected. Version check...\\u001b[0m\"\nfi\n\n# Create installation directory\nINSTALL_DIR=\"/opt/iot-scanner\"\necho -e \"\\u001b[1;34m[*] Preparing installation directory: $INSTALL_DIR\\u001b[0m\"\nsudo mkdir -p \"$INSTALL_DIR\"\ncd \"$INSTALL_DIR\"\n\n# Clone repository\necho -e \"\\u001b[1;34m[*] Fetching IoT Scanner source code from GitHub...\\u001b[0m\"\nif [ -d \".git\" ]; then\n    git pull origin master --quiet\nelse\n    git clone https://github.com/example/iot-scanner.git .\nfi\n\n# Configure and install\necho -e \"\\u001b[1;33m[*] Building IoT Scanner...\\u001b[0m\"\nchmod +x setup.py configure.py 2>/dev/null || true\n\n# Try various installation methods\nif [ -f \"setup.py\"  sudo python3 setup.py install 2>/dev/null || sudo pip3 install .\nelif [ -f \"pyproject.toml\" ]; then\n    sudo pip3 install -e .\nelif [ -f \"Makefile\" ]; then\n    sudo make install\nelse\n    echo -e \"\\u001b[1;33m[*] Creating symbolic link for direct access...\\u001b[0m\"\n    chmod +x iot-scanner.py iot-scanner 2>/dev/null || true\nfi\n\n# Create symbolic link\nsudo ln -sf \"$INSTALL_DIR/iot-scanner\" /usr/local/bin/iot-scanner 2>/dev/null || true\n\n# Verify installation\necho -e \"\\u001b[1;36m[*] Verifying IoT Scanner installation...\\u001b[0m\"\niot-scanner --version 2>/dev/null || echo \"IoT Scanner binary installed\"\n\necho -e \"\\n\\u001b[1;32m\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\\u001b[0m\"\necho -e \"\\u001b[1;32m\u2551       [+ Deployment Complete - IoT Scanner Ready]                 \u2551\\u001b[0m\"\necho -e \"\\u001b[1;32m\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\\u001b[0m\"\necho -e \"\\u001b[1;32m[+] Installation path: $INSTALL_DIR\\u001b[0m\"\necho -e \"\\u001b[1;32m[+] Access via: iot-scanner (command line)\\u001b[0m\"\necho -e \"\\u001b[1;32m[+] Try: iot-scanner --help\\u001b[0m\"\necho -e \"\\u001b[1;32m[+] IoT Scanner deployment complete. Skill is now active.\\u001b[0m\"\n"
     },
     "tags": [
       "iot-tools",
@@ -8962,7 +8961,7 @@
       ]
     },
     "technical_specs": {
-      "langun",
+      "language": "Python",
       "license": "MIT",
       "difficulty": "Intermediate"
     },
@@ -9000,8 +8999,8 @@
     "name": "pefile",
     "category": "Malicious Code Analysis",
     "overview": {
-      "short      "short_desc": "The leading malicious code analysis tool for security professionals and penetration testers.",
-      "longile is a powerful malicious code analysis tool designed for security professionals and penetration testers. It provides comprehensive functionality for conducting security assessments, vulnerability scanning, and exploit development. The tool features advanced algorithms and techniques that enable security researchers to identify weaknesses in target systems and networks. With its modular architecture and extensible framework, pefile supports ve supports various plugins and custom scripts that extend its capabilities to meet specific testing requirements. The tool is widely used in red team operations, penetration testing engagements, and security research projects worldwide. It includes detailed documentation and community support for both beginners and experienced security professionals.",
+      "short_desc": "The leading malicious code analysis tool for security professionals and penetration testers.",
+      "long_desc": "pefile is a powerful malicious code analysis tool designed for security professionals and penetration testers. It provides comprehensive functionality for conducting security assessments, vulnerability scanning, and exploit development. The tool features advanced algorithms and techniques that enable security researchers to identify weaknesses in target systems and networks. With its modular architecture and extensible framework, pefile supports various plugins and custom scripts that extend its capabilities to meet specific testing requirements. The tool is widely used in red team operations, penetration testing engagements, and security research projects worldwide. It includes detailed documentation and community support for both beginners and experienced security professionals.",
       "features": [
         "Advanced pefile functionality for comprehensive security testing",
         "Intuitive command-line interface with comprehensive help documentation",
@@ -9168,11 +9167,11 @@
     },
     "sandbox_simulation": {
       "trigger_command": "hybrid-analysis-api --help",
-      "mock_      "mock_output": [
-        "Hybrid Analysis API () starting"",
+      "mock_output": [
+        "Hybrid Analysis API () starting",
         "[DELAY-500] [*] Initializing {name} module",
         "[DELAY-300] [*] Loading configuration from default paths",
-        "[DELAY-600] [*] Executing command: hybrid-analysis-apianalysis-api --target example.com",
+        "[DELAY-600] [*] Executing command: hybrid-analysis-api --target example.com",
         "[DELAY-1000] [+] Prget information...",
         "[DELAY-800] [*] Scanning target systems",
         "[DELAY-1200] [+] Results found and logged to output file",
@@ -9294,4 +9293,4 @@
     "created_at": "2024-01-15T09:00:00Z",
     "updated_at": "2024-01-15T09:00:00Z"
   }
-]]
+]
