@@ -112,68 +112,125 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AGENT PROVIDES TOOLS & SKILLS SECTION */}
-      <section className="w-full py-24 border-b border-accent-teal/40 bg-gradient-to-r from-godteal/5 to-accent-teal/5 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-8 h-[2px] bg-divine-green"></span>
-              <span className="label-text text-divine-green font-bold uppercase tracking-[0.1875rem]">The Agent Model</span>
-              <span className="w-8 h-[2px] bg-divine-green"></span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold font-expanded mb-6 leading-tight text-godteal">
-              An Agent That<br/>Provides Tools & Skills
+      {/* AGENT PROVIDES TOOLS & SKILLS - PROMINENT HERO SECTION */}
+      <section className="w-full py-32 border-b-2 border-divine-green/40 bg-gradient-to-b from-divine-green/10 to-accent-teal/5 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-divine-green/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-teal/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-8 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <span className="label-text text-divine-green font-bold uppercase tracking-[0.1875rem] mb-4 block">
+              ⌈ Agent-Driven Architecture ⌉
+            </span>
+            <h2 className="text-6xl md:text-7xl font-bold font-expanded mb-8 leading-tight text-godteal">
+              Agent Provides<br/><span className="text-divine-green">183 Tools & Skills</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-xl font-mondwest leading-relaxed text-godteal/90">
-              This is not a generic knowledge base or chatbot. <span className="font-bold text-accent-teal">Aether is an intelligent, autonomous agent</span> built specifically to curate and deliver <span className="font-bold text-divine-green">ready-to-execute security tools and skills</span> tailored to hackers, penetration testers, and security professionals.
+            <p className="max-w-3xl mx-auto text-lg font-mondwest text-godteal/85 leading-relaxed">
+              Aether is not a generic AI. It's an autonomous agent engineered to understand security objectives, curate precision tools, and execute complex workflows. Every tool is vetted, documented, and immediately deployable.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {/* Card 1: Understands Your Objective */}
-            <div className="p-8 border border-accent-teal/30 bg-white/30 backdrop-blur-sm hover:bg-white/50 transition-all duration-300 group">
-              <div className="mb-6 text-4xl font-expanded text-divine-green opacity-60 group-hover:opacity-100 transition-opacity">⚔️</div>
-              <h3 className="text-lg font-bold font-expanded uppercase tracking-wide text-godteal mb-4">
-                Understands Your Mission
-              </h3>
-              <p className="font-mondwest text-godteal/80 leading-relaxed">
-                Tell the agent what you need to accomplish—reconnaissance, vulnerability scanning, exploitation, lateral movement, or analysis—and it recognizes the objective and selects the perfect toolset.
-              </p>
+          {/* Three Major Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+            {/* Card 1: 183 Skills Across 8 Categories */}
+            <div className="group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-divine-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative p-8 border-2 border-divine-green/60 bg-white/50 backdrop-blur-sm hover:bg-white/70 transition-all duration-300 shadow-lg hover:shadow-2xl h-full flex flex-col">
+                {/* Icon */}
+                <div className="mb-6 inline-block">
+                  <div className="p-4 bg-divine-green/20 rounded-lg">
+                    <span className="text-3xl">📚</span>
+                  </div>
+                </div>
+                {/* Stat */}
+                <div className="mb-4">
+                  <div className="text-5xl font-bold font-expanded text-divine-green">183</div>
+                  <p className="text-sm font-sans text-divine-green/70 uppercase tracking-wider mt-1">Enterprise-Grade Skills</p>
+                </div>
+                {/* Title */}
+                <h3 className="text-xl font-bold font-expanded text-godteal mb-4 uppercase tracking-wide">
+                  Curated Arsenal
+                </h3>
+                {/* Description */}
+                <p className="font-mondwest text-godteal/80 leading-relaxed flex-grow">
+                  Information Gathering, Vulnerability Scanning, Exploitation, Post-Exploitation, Reverse Engineering, Cryptography, Network Analysis, Malware Analysis—all organized by discipline and difficulty level.
+                </p>
+                {/* Technical specs */}
+                <div className="mt-6 pt-6 border-t border-accent-teal/30 flex gap-4 text-xs font-courier text-godteal/60">
+                  <span>8 Categories</span>
+                  <span>•</span>
+                  <span>Documented</span>
+                  <span>•</span>
+                  <span>Deployable</span>
+                </div>
+              </div>
             </div>
 
-            {/* Card 2: Delivers Precise Tools */}
-            <div className="p-8 border border-accent-teal/30 bg-white/30 backdrop-blur-sm hover:bg-white/50 transition-all duration-300 group">
-              <div className="mb-6 text-4xl font-expanded text-divine-green opacity-60 group-hover:opacity-100 transition-opacity">🔧</div>
-              <h3 className="text-lg font-bold font-expanded uppercase tracking-wide text-godteal mb-4">
-                Delivers Precise Tools
-              </h3>
-              <p className="font-mondwest text-godteal/80 leading-relaxed">
-                No bloat. No guessing. The agent provisions the exact tools you need—Nmap for reconnaissance, SQLMap for SQL injection testing, Ghidra for reverse engineering. Every tool is documented and immediately executable.
-              </p>
+            {/* Card 2: Intelligent Provisioning */}
+            <div className="group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative p-8 border-2 border-accent-teal/60 bg-white/50 backdrop-blur-sm hover:bg-white/70 transition-all duration-300 shadow-lg hover:shadow-2xl h-full flex flex-col">
+                {/* Icon */}
+                <div className="mb-6 inline-block">
+                  <div className="p-4 bg-accent-teal/20 rounded-lg">
+                    <span className="text-3xl">⚙️</span>
+                  </div>
+                </div>
+                {/* Title */}
+                <h3 className="text-xl font-bold font-expanded text-godteal mb-4 uppercase tracking-wide">
+                  Smart Provisioning
+                </h3>
+                {/* Description */}
+                <p className="font-mondwest text-godteal/80 leading-relaxed flex-grow">
+                  Define your objective—reconnaissance, exploitation, analysis—and the agent automatically selects the perfect toolset. No manual configuration. No guesswork. Just precision delivery of what you actually need.
+                </p>
+                {/* Technical specs */}
+                <div className="mt-6 pt-6 border-t border-accent-teal/30">
+                  <p className="font-courier text-sm text-accent-teal/80 mb-3">$ agent exec --scan network_recon</p>
+                  <div className="flex gap-3 text-xs font-courier text-godteal/60">
+                    <span>→ Nmap</span>
+                    <span>→ Shodan</span>
+                    <span>→ DNS enum</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Card 3: Executes Autonomously */}
-            <div className="p-8 border border-accent-teal/30 bg-white/30 backdrop-blur-sm hover:bg-white/50 transition-all duration-300 group">
-              <div className="mb-6 text-4xl font-expanded text-divine-green opacity-60 group-hover:opacity-100 transition-opacity">⚡</div>
-              <h3 className="text-lg font-bold font-expanded uppercase tracking-wide text-godteal mb-4">
-                Executes Autonomously
-              </h3>
-              <p className="font-mondwest text-godteal/80 leading-relaxed">
-                Deploy the agent and let it handle the execution. Run scanning campaigns, execute exploit frameworks, or analyze malware samples automatically. Scale your operations without manual intervention.
-              </p>
+            {/* Card 3: Autonomous Execution */}
+            <div className="group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-divine-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative p-8 border-2 border-divine-green/60 bg-white/50 backdrop-blur-sm hover:bg-white/70 transition-all duration-300 shadow-lg hover:shadow-2xl h-full flex flex-col">
+                {/* Icon */}
+                <div className="mb-6 inline-block">
+                  <div className="p-4 bg-divine-green/20 rounded-lg">
+                    <span className="text-3xl">⚡</span>
+                  </div>
+                </div>
+                {/* Title */}
+                <h3 className="text-xl font-bold font-expanded text-godteal mb-4 uppercase tracking-wide">
+                  Autonomous Execution
+                </h3>
+                {/* Description */}
+                <p className="font-mondwest text-godteal/80 leading-relaxed flex-grow">
+                  Deploy once, execute infinitely. The agent runs scanning campaigns, exploit frameworks, and malware analysis pipelines 24/7. Process results in isolation. Scale without manual overhead or operational fatigue.
+                </p>
+                {/* Technical specs */}
+                <div className="mt-6 pt-6 border-t border-divine-green/30 flex gap-4 text-xs font-courier text-godteal/60">
+                  <span>Parallel Execution</span>
+                  <span>•</span>
+                  <span>Zero Context Cost</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="mt-16 p-10 border-2 border-divine-green/40 bg-divine-green/5 text-center">
-            <h3 className="text-2xl font-bold font-expanded text-godteal mb-4">
-              The Grimoire: A Living Arsenal of Skills
-            </h3>
-            <p className="max-w-2xl mx-auto text-lg font-mondwest text-godteal/90 leading-relaxed mb-6">
-              Browse categories of pre-vetted, enterprise-grade security tools organized by use case. Information Gathering, Vulnerability Scanning, Exploitation, Post-Exploitation, Reverse Engineering, Cryptography, Network Analysis, and Malware Analysis. Each tool includes deployment scripts, technical documentation, and sandbox demos.
-            </p>
-            <Link href="/catalog" className="inline-flex items-center gap-2 font-expanded font-bold uppercase text-sm text-divine-green hover:text-accent-teal transition-colors px-6 py-3 border border-divine-green/50 hover:border-accent-teal/50 bg-divine-green/10 hover:bg-accent-teal/10">
-              Explore the Grimoire
-              <ChevronRight size={18} />
+          {/* CTA */}
+          <div className="mt-20 text-center">
+            <Link href="/catalog" className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-divine-green to-accent-teal text-white font-bold font-expanded uppercase text-sm tracking-wider hover:shadow-2xl transition-all duration-300 border border-divine-green/80 hover:border-divine-green">
+              Browse 183 Skills in the Grimoire
+              <ChevronRight size={20} />
             </Link>
           </div>
         </div>
