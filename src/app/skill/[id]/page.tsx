@@ -1,7 +1,22 @@
 import Link from 'next/link';
 import TerminalSandbox from '../../components/TerminalSandbox';
 import DownloadButton from '../../components/DownloadButton';
-import skills from '../../../lib/skills.json';
+import skillsData from '../../../lib/skills.json';
+
+interface Skill {
+  id: string;
+  name: string;
+  category: string;
+  overview: { short_desc: string; long_desc: string; features: string[] };
+  technical_specs: { language: string; license: string; difficulty: string };
+  sandbox_simulation: { trigger_command: string; mock_output: string[] };
+  download_script: { filename: string; content: string };
+  tags: string[];
+  author: string;
+  created_at: string;
+}
+
+const skills = skillsData as Skill[];
 
 interface SkillParams {
   params: Promise<{
