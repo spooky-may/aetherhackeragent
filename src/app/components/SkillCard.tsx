@@ -48,7 +48,7 @@ export default function SkillCard({ skill }: SkillCardProps) {
       <div className="flex flex-col gap-4 p-6 h-full bg-godteal hover-glow border border-transparent group-hover:border-accent-teal transition-all duration-250 relative z-10">
         
         {/* Logo Watermark inside Card */}
-        <div className="absolute top-0 right-0 w-32 h-32 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity pointer-events-none mix-blend-screen">
+        <div className="absolute top-0 right-0 w-32 h-32 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity pointer-events-none mix-blend-screen overflow-hidden">
           <Image src="/logo.jpeg" alt="Card Logo Watermark" fill className="object-cover rounded-bl-full" />
         </div>
 

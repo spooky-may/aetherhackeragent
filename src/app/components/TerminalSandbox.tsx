@@ -105,7 +105,7 @@ export default function TerminalSandbox({ command, output }: TerminalSandboxProp
         ) : (
           <>
             {lines.map((line, idx) => (
-              <div key={idx} className="terminal-line text-xs font-courier">
+              <div key={idx} className="terminal-line text-[0.8rem] font-courier text-[#00dd66] drop-shadow-[0_0_8px_rgba(0,221,102,0.8)]">
                 {line}
               </div>
             ))}
@@ -113,7 +113,7 @@ export default function TerminalSandbox({ command, output }: TerminalSandboxProp
             {/* Blinking cursor */}
             {isRunning && (
               <div className="terminal-line inline">
-                <span className="terminal-cursor"></span>
+                <span className="terminal-cursor text-[#00dd66] drop-shadow-[0_0_8px_rgba(0,221,102,0.8)] animate-pulse">█</span>
               </div>
             )}
           </>

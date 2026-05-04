@@ -1,110 +1,105 @@
-# Aether Hacker Agent
+# AETHER HACKER AGENT
 
-A mystical, agent-driven security toolkit inspired by ancient Greek goddess mythology.
+**Aether Hacker Agent** is a cutting-edge, autonomous cybersecurity infrastructure orchestrator. Inspired by ancient divine architecture, it provides an agentic runtime for executing, managing, and chaining complex security payloads within isolated, hardened namespaces. 
 
-## Project Structure
+Aether serves as the connective tissue between high-level tactical intent and low-level system execution.
+
+---
+
+## Technical Architecture
+
+The Aether framework relies on a decoupled, asynchronous processing model to ensure zero-context execution for heavy security workflows.
+
+### 1. Core System Orchestration
+The Aether Core manages payload resolution, dependency injection, and state tracking. It acts as the central router for all inbound commands.
+
+```mermaid
+graph TD;
+    User([Tactical Interface]) --> |Command/Intent| API[Gateway Sentinel]
+    API --> Core[Aether Core Orchestrator]
+    Core --> Registry[(Skill Grimoire/Registry)]
+    Core --> Scheduler[Ritual Scheduler]
+    Scheduler --> Dispatcher[Subagent Dispatcher]
+    
+    subgraph Execution Realm
+        Dispatcher --> SandboxA[Hardened Namespace A]
+        Dispatcher --> SandboxB[Hardened Namespace B]
+    end
+    
+    SandboxA -.-> |Telemetry| Scribe[Telemetry Scribe]
+    SandboxB -.-> |Telemetry| Scribe
+```
+
+### 2. Sub-Agent Dispatch Flow
+To handle complex, multi-stage attacks or extensive reconnaissance without blocking the main event loop, Aether utilizes lightweight sub-agents. These sub-agents run parallel execution pipelines.
+
+```mermaid
+sequenceDiagram
+    participant O as Orchestrator
+    participant D as Dispatcher
+    participant SA as Sub-Agent
+    participant T as Target Environment
+    
+    O->>D: Request Batch Execution (e.g. Nmap Sweep)
+    activate D
+    D->>SA: Initialize Sub-Agent Context
+    activate SA
+    SA->>T: Execute Payload
+    T-->>SA: Raw stdout/stderr stream
+    SA-->>D: Normalizes & Parses Output
+    deactivate SA
+    D-->>O: Return Structured Telemetry
+    deactivate D
+    O->>O: Update Global State / Memory
+```
+
+### 3. Namespace Isolation & Execution Chamber
+All untrusted or highly volatile tools (like external exploit scripts or heavy scanners) are executed within transient, isolated sandbox environments.
+
+```mermaid
+graph LR
+    subgraph Host System
+        Aether[Aether Runtime]
+    end
+    
+    subgraph Execution Chamber
+        Isolator[Namespace Isolator]
+        Payload[Binary/Script]
+        Isolator --> Payload
+        Payload --> |Virtual Network| Target((External Target))
+    end
+    
+    Aether --> |Spawn & Mount| Isolator
+    Isolator -.-> |StdOut Pipe| Aether
+```
+
+## Repository Structure
 
 ```
 aetherhackeragent/
-├── app/
-│   ├── components/
-│   │   ├── DownloadButton.tsx      # Client-side script downloader
-│   │   └── TerminalSandbox.tsx     # Animated terminal simulator
-│   ├── skill/
-│   │   └── [id]/
-│   │       └── page.tsx             # Individual skill detail page
-│   ├── globals.css                  # Global styles & Tailwind
-│   ├── layout.tsx                   # Root layout
-│   └── page.tsx                     # Landing page (skill listing)
-├── lib/
-│   └── skills.json                  # Skill definitions
-├── next.config.js
-├── tailwind.config.js
-├── postcss.config.js
-└── tsconfig.json
+├── engine/              # Core execution loops and state management
+├── infrastructure/      # Networking, protocols, and telemetry pipelines
+├── intelligence/        # LLM parsing, logic synthesis, and memory
+├── security/            # Access control, encryption, and namespace isolation
+├── src/                 # Next.js 15 Frontend (App Router, Tailwind v4)
+└── src/lib/skills.json  # The "Grimoire" - SSOT for available capabilities
 ```
 
-## Design System
-
-### Colors
-- **Background**: `#ffe6cb` (Warm Parchment)
-- **Primary Text**: `#041C1C` (Dark Teal)
-- **Accent Teal**: `#17a2a2` (Dividers, borders)
-- **Divine Green**: `#00dd66` (CTAs, actions)
-- **Sacred Purple**: `#b74a9e` (Hover states)
-- **Divine Gold**: `#d4af37` (Special moments)
-
-### Typography
-- **Headers**: rulesexpanded (font-expanded)
-- **Body**: mondwestfont (font-mondwest)
-- **Code/Terminal**: Courier Prime (font-courier)
-- **Fallback**: System sans-serif (font-sans)
-
-### Medieval Aesthetics
-- Ornamental borders with corner brackets `⌈ ⌉`
-- Halo glow effects on skill cards
-- Double-border terminal windows
-- Smooth transitions (200-250ms ease-out)
-
-## Getting Started
-
-### Development
+## Deployment 
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-org/aetherhackeragent.git
+cd aetherhackeragent
+
+# Install dependencies
 npm install
+
+# Initialize the development server
 npm run dev
 ```
 
-Visit `http://localhost:3000` to see the landing page.
+*Requires Node.js 20+ and a compatible package manager.*
 
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-## Features
-
-### Landing Page (`/`)
-- Skills grouped by category
-- Visual cards with descriptions
-- Difficulty badges
-- Hover effects with ornamental styling
-
-### Skill Detail Page (`/skill/[id]`)
-- Full skill documentation (overview, features)
-- Technical specifications
-- Live terminal sandbox simulation
-- Download installation script (client-side)
-- Tags and metadata
-
-### Terminal Sandbox Component
-Parses `[DELAY-XXX]` markers in mock output:
-- Extracts delay duration and visible text
-- Renders with asynchronous delays
-- Auto-scrolls to bottom
-- Shows blinking cursor while running
-- No markers visible to user
-
-### Script Download
-- Client-side Blob generation
-- No server-side file serving
-- Memory-safe URL revocation
-- Content embedded in JSON
-
-## Development Notes
-
-- **No API calls**: All data is loaded from static JSON
-- **Client-side rendering**: Terminal simulator uses React hooks
-- **Responsive design**: Mobile-first, responsive grid layout
-- **Type-safe**: Full TypeScript support
-
-## Next Steps
-
-1. Add more skills to `lib/skills.json`
-2. Customize fonts (import actual font files)
-3. Add search/filtering
-4. Add user skill bookmarking
-5. Implement skill versioning
-6. Add related skills linking
+---
+*© 2026 Divine Protocols. Licensed under MIT.*

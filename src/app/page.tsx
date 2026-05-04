@@ -13,7 +13,7 @@ export default function Home() {
            <div className="w-full h-full rounded-full overflow-hidden relative">
              {/* Creepy Theme Overlay - Lightened */}
              <div className="absolute inset-0 bg-godteal/30 mix-blend-multiply z-10 pointer-events-none transition-opacity duration-700 group-hover:opacity-100"></div>
-             <Image src="/logo.jpeg" alt="Goddess Mascot" fill className="object-cover grayscale-[0.3] sepia-[0.2] contrast-[1.1] brightness-[0.95] transition-transform duration-700 group-hover:scale-105" />
+             <Image src="/logo.jpeg" alt="Goddess Mascot" fill priority className="object-cover grayscale-[0.3] sepia-[0.2] contrast-[1.1] brightness-[0.95] transition-transform duration-700 group-hover:scale-105" />
            </div>
         </div>
         <div>
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className="flex gap-6 mt-4">
           <Link href="/catalog" className="btn-divine shadow-lg px-8">
-            Access the Grimoire
+            Enter the Grimoire
           </Link>
           <a href="#" className="px-6 py-3 border border-accent-teal/40 text-godteal font-sans uppercase text-[0.6875rem] tracking-[0.1875rem] hover:bg-accent-teal/10 transition-smooth cursor-pointer bg-white/30">
             Deploy Local Node
@@ -101,7 +101,7 @@ export default function Home() {
                 
                 <div className="w-full h-full rounded-full overflow-hidden border-4 border-double border-accent-teal/60 shadow-2xl relative group">
                   <div className="absolute inset-0 bg-godteal/10 mix-blend-color z-10"></div>
-                  <Image src="/logo.jpeg" alt="Aether Agent Presence" fill className="object-cover" />
+                  <Image src="/logo.jpeg" alt="Aether Agent Presence" fill priority className="object-cover" />
                 </div>
               </div>
             </div>
@@ -139,6 +139,59 @@ export default function Home() {
             </p>
           </div>
 
+          <div className="p-8 lg:p-12 border-b lg:border-b-0 lg:border-r lg:border-t border-accent-teal/40 bg-white/20 hover:bg-white/40 transition-colors group">
+            <h3 className="font-sans text-[0.875rem] tracking-[0.1875rem] uppercase font-bold text-godteal mb-4 group-hover:text-accent-teal transition-colors">Zero-Context Delegation</h3>
+            <p className="font-mondwest text-lg opacity-90 text-godteal leading-relaxed">
+              Scale your operations without mental fatigue. Aether Hacker dispatches specialized sub-agents to handle batch tasks, enabling parallel execution pipelines with zero context-cost.
+            </p>
+          </div>
+
+          <div className="p-8 lg:p-12 border-b md:border-b-0 lg:border-r lg:border-t border-accent-teal/40 bg-white/20 hover:bg-white/40 transition-colors group">
+            <h3 className="font-sans text-[0.875rem] tracking-[0.1875rem] uppercase font-bold text-godteal mb-4 group-hover:text-accent-teal transition-colors">Automated Vigilance</h3>
+            <p className="font-mondwest text-lg opacity-90 text-godteal leading-relaxed">
+              Schedule complex security audits using natural language. From periodic port sweeps to automated reporting, the agent maintains an eternal watch over your digital perimeters.
+            </p>
+          </div>
+
+          <div className="p-8 lg:p-12 lg:border-t border-accent-teal/40 bg-white/20 hover:bg-white/40 transition-colors group">
+            <h3 className="font-sans text-[0.875rem] tracking-[0.1875rem] uppercase font-bold text-godteal mb-4 group-hover:text-accent-teal transition-colors">The Living Grimoire</h3>
+            <p className="font-mondwest text-lg opacity-90 text-godteal leading-relaxed">
+              Access a constantly evolving repository of technical skills. Each tool is vetted, documented, and ready for immediate deployment into your operational theatre.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Ritual Process / How it Works */}
+      <div className="w-full border-b border-accent-teal/40 bg-white/10">
+        <div className="p-6 border-b border-accent-teal/40 bg-white/20">
+          <h2 className="font-expanded text-xl font-bold uppercase tracking-widest text-godteal">
+            The Path to Manifestation
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="p-8 lg:p-12 border-b md:border-b-0 md:border-r border-accent-teal/40 flex flex-col items-center text-center group hover:bg-white/20 transition-colors">
+            <span className="font-expanded text-4xl text-godteal mb-4 opacity-50 group-hover:text-accent-teal transition-colors">I</span>
+            <h3 className="font-sans text-[0.875rem] tracking-[0.1875rem] uppercase font-bold text-godteal mb-4">Summon the Core</h3>
+            <p className="font-mondwest text-lg opacity-90 text-godteal leading-relaxed">
+              Establish your autonomous node. Deploy the Aether Core onto your server to begin manifesting technical capabilities.
+            </p>
+          </div>
+          <div className="p-8 lg:p-12 border-b md:border-b-0 md:border-r border-accent-teal/40 flex flex-col items-center text-center group hover:bg-white/20 transition-colors">
+            <span className="font-expanded text-4xl text-godteal mb-4 opacity-50 group-hover:text-accent-teal transition-colors">II</span>
+            <h3 className="font-sans text-[0.875rem] tracking-[0.1875rem] uppercase font-bold text-godteal mb-4">Attune Conduits</h3>
+            <p className="font-mondwest text-lg opacity-90 text-godteal leading-relaxed">
+              Connect your tactical interfaces. Link Discord, Telegram, or direct CLI to issue commands across realms.
+            </p>
+          </div>
+          <div className="p-8 lg:p-12 flex flex-col items-center text-center group hover:bg-white/20 transition-colors">
+            <span className="font-expanded text-4xl text-godteal mb-4 opacity-50 group-hover:text-accent-teal transition-colors">III</span>
+            <h3 className="font-sans text-[0.875rem] tracking-[0.1875rem] uppercase font-bold text-godteal mb-4">Execute Skills</h3>
+            <p className="font-mondwest text-lg opacity-90 text-godteal leading-relaxed">
+              Browse the Grimoire, extract specific tools, and command the agent to perform complex security rituals autonomously.
+            </p>
+          </div>
         </div>
       </div>
 
