@@ -5,14 +5,41 @@ export default function Home() {
     <div className="w-full relative z-10 flex flex-col pb-16">
       {/* Hero Section */}
       <div className="w-full flex flex-col items-center justify-center gap-8 py-32 text-center border-b border-accent-teal/40 bg-gradient-to-b from-white/0 to-accent-teal/10">
-        <div className="w-40 h-40 artifact-ring mb-4 shadow-2xl relative group">
+        <div className="w-40 h-40 relative group mb-4">
+           {/* Divine Crown Elements */}
+           <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-6 flex justify-center items-center">
+             <div className="w-2 h-4 bg-accent-teal/60 rounded-t-full mx-1"></div>
+             <div className="w-3 h-5 bg-accent-teal/80 rounded-t-full mx-1"></div>
+             <div className="w-2 h-4 bg-accent-teal/60 rounded-t-full mx-1"></div>
+             <div className="w-4 h-6 bg-accent-teal rounded-t-full mx-1"></div>
+             <div className="w-2 h-4 bg-accent-teal/60 rounded-t-full mx-1"></div>
+             <div className="w-3 h-5 bg-accent-teal/80 rounded-t-full mx-1"></div>
+             <div className="w-2 h-4 bg-accent-teal/60 rounded-t-full mx-1"></div>
+           </div>
+           
+           {/* Outer Divine Rings */}
+           <div className="absolute inset-0 border-4 border-accent-teal/30 rounded-full scale-110 group-hover:scale-105 transition-transform duration-1000"></div>
+           <div className="absolute inset-2 border-2 border-accent-teal/20 rounded-full animate-[spin_30s_linear_infinite]"></div>
+           <div className="absolute inset-4 border border-accent-teal/10 rounded-full animate-[spin_45s_linear_reverse_infinite]"></div>
+           
            {/* Halo glow behind mascot */}
-           <div className="absolute inset-0 bg-divine-green/20 blur-3xl rounded-full z-[-1]"></div>
-           <div className="w-full h-full rounded-full overflow-hidden relative">
+           <div className="absolute inset-0 bg-divine-green/20 blur-3xl rounded-full z-[-1] group-hover:bg-divine-green/30 transition-colors duration-1000"></div>
+           
+           {/* Inner Goddess Frame */}
+           <div className="w-full h-full rounded-full border-3 border-accent-teal/50 p-2 relative z-10 overflow-hidden shadow-[0_0_80px_rgba(23,162,162,0.4)] bg-gradient-to-br from-godteal/20 to-accent-teal/10 backdrop-blur-sm">
              {/* Creepy Theme Overlay - Lightened */}
              <div className="absolute inset-0 bg-godteal/30 mix-blend-multiply z-10 pointer-events-none transition-opacity duration-700 group-hover:opacity-10"></div>
-             <img src="/refrence/logo.jpeg" alt="Goddess Mascot" className="w-full h-full object-cover grayscale-[0.3] sepia-[0.2] contrast-[1.1] brightness-[0.95] transition-transform duration-700 group-hover:scale-105" />
+             <img src="/refrence/logo.jpeg" alt="Goddess Mascot" className="w-full h-full object-cover grayscale-[0.3] sepia-[0.2] contrast-[1.1] brightness-[0.95] transition-transform duration-700 group-hover:scale-105 rounded-full" />
+             
+             {/* Divine Inner Glow */}
+             <div className="absolute inset-0 rounded-full bg-accent-teal/10 blur-[20px] group-hover:bg-accent-teal/20 transition-colors duration-1000"></div>
            </div>
+           
+           {/* Corner Flourishes */}
+           <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-accent-teal/40 rounded-tl-full opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
+           <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-accent-teal/40 rounded-tr-full opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
+           <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-accent-teal/40 rounded-bl-full opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
+           <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-accent-teal/40 rounded-br-full opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
         </div>
         <div>
           <small className="font-sans text-[0.6875rem] tracking-[0.1875rem] mb-6 opacity-60 uppercase block text-godteal font-bold">
@@ -83,47 +110,82 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column: Aesthetic Manifestation */}
-          <div className="relative min-h-[500px] lg:min-h-full flex items-center justify-center bg-godteal group overflow-hidden">
-            {/* Ambient Background Layer */}
-            <div className="absolute inset-0 bg-[url('/logo.jpeg')] bg-cover bg-center opacity-20 grayscale brightness-50 scale-110 group-hover:scale-105 transition-transform duration-[4s] ease-out"></div>
-            <div className="absolute inset-0 bg-gradient-to-tr from-godteal via-godteal/80 to-transparent"></div>
+          {/* Right Column: Majestic Elder Manifestation */}
+          <div className="relative min-h-[500px] lg:min-h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 group overflow-hidden">
+            {/* Majestic Background Layer */}
+            <div className="absolute inset-0 bg-[url('/logo.jpeg')] bg-cover bg-center opacity-8 grayscale brightness-30 scale-110 group-hover:scale-105 transition-transform duration-[4s] ease-out"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-900/20 via-slate-800 to-teal-900/15"></div>
             
             {/* The Artifact Core */}
             <div className="relative w-80 h-80 md:w-[450px] md:h-[450px] z-10 flex items-center justify-center">
               
-              {/* Ornamental Outer Ring */}
-              <div className="absolute inset-0 border border-accent-teal/20 rounded-full scale-110 group-hover:scale-100 transition-transform duration-1000"></div>
-              <div className="absolute inset-4 border border-accent-teal/10 rounded-full animate-[spin_30s_linear_infinite]"></div>
+              {/* Majestic Crown Elements */}
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-8 flex justify-center items-center">
+                <div className="w-3 h-6 bg-emerald-400/60 rounded-t-full mx-1 shadow-[0_0_10px_rgba(52,211,153,0.5)]"></div>
+                <div className="w-4 h-7 bg-green-400/70 rounded-t-full mx-1 shadow-[0_0_12px_rgba(74,222,128,0.6)]"></div>
+                <div className="w-3 h-6 bg-emerald-400/60 rounded-t-full mx-1 shadow-[0_0_10px_rgba(52,211,153,0.5)]"></div>
+                <div className="w-5 h-8 bg-teal-300/80 rounded-t-full mx-1 shadow-[0_0_15px_rgba(94,234,212,0.7)]"></div>
+                <div className="w-3 h-6 bg-emerald-400/60 rounded-t-full mx-1 shadow-[0_0_10px_rgba(52,211,153,0.5)]"></div>
+                <div className="w-4 h-7 bg-green-400/70 rounded-t-full mx-1 shadow-[0_0_12px_rgba(74,222,128,0.6)]"></div>
+                <div className="w-3 h-6 bg-emerald-400/60 rounded-t-full mx-1 shadow-[0_0_10px_rgba(52,211,153,0.5)]"></div>
+              </div>
               
-              {/* Corner Brackets (Mystical Frame) */}
-              <div className="absolute -top-6 -left-6 w-16 h-16 border-t border-l border-accent-teal/60 opacity-40 group-hover:opacity-100 group-hover:w-20 group-hover:h-20 transition-all duration-700"></div>
-              <div className="absolute -top-6 -right-6 w-16 h-16 border-t border-r border-accent-teal/60 opacity-40 group-hover:opacity-100 group-hover:w-20 group-hover:h-20 transition-all duration-700"></div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 border-b border-l border-accent-teal/60 opacity-40 group-hover:opacity-100 group-hover:w-20 group-hover:h-20 transition-all duration-700"></div>
-              <div className="absolute -bottom-6 -right-6 w-16 h-16 border-b border-r border-accent-teal/60 opacity-40 group-hover:opacity-100 group-hover:w-20 group-hover:h-20 transition-all duration-700"></div>
+              {/* Majestic Outer Rings */}
+              <div className="absolute inset-0 border-4 border-emerald-400/30 rounded-full scale-110 group-hover:scale-105 transition-transform duration-1000 shadow-[0_0_60px_rgba(52,211,153,0.2)]"></div>
+              <div className="absolute inset-2 border-2 border-green-400/25 rounded-full animate-[spin_30s_linear_infinite] shadow-[0_0_40px_rgba(74,222,128,0.15)]"></div>
+              <div className="absolute inset-4 border border-teal-300/20 rounded-full animate-[spin_45s_linear_reverse_infinite] shadow-[0_0_30px_rgba(94,234,212,0.1)]"></div>
               
-              {/* Inner Divine Glow */}
-              <div className="absolute inset-0 rounded-full bg-accent-teal/15 blur-[80px] group-hover:bg-accent-teal/25 transition-colors duration-1000"></div>
+              {/* Regal Corner Flourishes */}
+              <div className="absolute -top-6 -left-6 w-12 h-12 border-t-3 border-l-3 border-emerald-400/50 rounded-tl-full opacity-70 group-hover:opacity-100 group-hover:w-16 group-hover:h-16 transition-all duration-700 shadow-[0_0_20px_rgba(52,211,153,0.3)]"></div>
+              <div className="absolute -top-6 -right-6 w-12 h-12 border-t-3 border-r-3 border-emerald-400/50 rounded-tr-full opacity-70 group-hover:opacity-100 group-hover:w-16 group-hover:h-16 transition-all duration-700 shadow-[0_0_20px_rgba(52,211,153,0.3)]"></div>
+              <div className="absolute -bottom-6 -left-6 w-12 h-12 border-b-3 border-l-3 border-emerald-400/50 rounded-bl-full opacity-70 group-hover:opacity-100 group-hover:w-16 group-hover:h-16 transition-all duration-700 shadow-[0_0_20px_rgba(52,211,153,0.3)]"></div>
+              <div className="absolute -bottom-6 -right-6 w-12 h-12 border-b-3 border-r-3 border-emerald-400/50 rounded-br-full opacity-70 group-hover:opacity-100 group-hover:w-16 group-hover:h-16 transition-all duration-700 shadow-[0_0_20px_rgba(52,211,153,0.3)]"></div>
               
-              {/* The Manifestation Frame */}
-              <div className="w-full h-full rounded-full border border-accent-teal/40 p-4 relative z-20 overflow-hidden shadow-[0_0_100px_rgba(23,162,162,0.2)] bg-godteal/50 backdrop-blur-sm">
+              {/* Inner Majestic Glow */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-400/15 via-green-400/10 to-teal-400/15 blur-[100px] group-hover:from-emerald-400/25 group-hover:via-green-400/20 group-hover:to-teal-400/25 transition-colors duration-1000"></div>
+              
+              {/* The Manifestation Frame - Imperial Seal */}
+              <div className="w-full h-full rounded-full border-4 border-emerald-400/60 p-6 relative z-20 overflow-hidden shadow-[0_0_120px_rgba(52,211,153,0.4)] bg-gradient-to-br from-slate-800/90 to-emerald-900/20 backdrop-blur-sm">
                 <img 
                   src="/logo.jpeg" 
                   alt="Aether Archon Manifestation" 
-                  className="w-full h-full object-cover grayscale-[0.5] sepia-[0.1] brightness-90 group-hover:grayscale-0 group-hover:brightness-110 transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100"
+                  className="w-full h-full object-cover grayscale-[0.6] sepia-[0.2] brightness-70 contrast-[1.1] group-hover:grayscale-0 group-hover:brightness-90 group-hover:contrast-[1.3] transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100"
                 />
                 
-                {/* Overlay Scanning Effect */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-teal/10 to-transparent h-[200%] -translate-y-full group-hover:translate-y-full transition-transform duration-[3s] pointer-events-none"></div>
+                {/* Overlay Imperial Effect */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-400/8 to-green-400/10 h-[200%] -translate-y-full group-hover:translate-y-full transition-transform duration-[4s] pointer-events-none"></div>
+                
+                {/* Regal Emblem Patterns */}
+                <div className="absolute inset-0 opacity-15 group-hover:opacity-30 transition-opacity duration-1000">
+                  <div className="absolute top-1/4 left-1/4 w-12 h-12 border-2 border-emerald-300/50 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 border border-emerald-300/70 rounded-full"></div>
+                  </div>
+                  <div className="absolute top-3/4 right-1/4 w-8 h-8 border-2 border-green-300/50 transform rotate-45 flex items-center justify-center">
+                    <div className="w-4 h-4 bg-green-300/30 rounded-full"></div>
+                  </div>
+                  <div className="absolute bottom-1/4 left-1/2 w-10 h-10 border-2 border-teal-300/50 transform -rotate-30 flex items-center justify-center">
+                    <div className="w-2 h-6 bg-teal-300/40 rounded-full"></div>
+                  </div>
+                </div>
               </div>
               
-              {/* Compass Elements */}
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 font-expanded text-[0.625rem] tracking-[0.4em] text-accent-teal/60 uppercase">North</div>
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 font-expanded text-[0.625rem] tracking-[0.4em] text-accent-teal/60 uppercase">South</div>
+              {/* Imperial Directions */}
+              <div className="absolute -top-14 left-1/2 -translate-x-1/2 font-expanded text-[0.625rem] tracking-[0.4em] text-emerald-300/80 uppercase">Divine</div>
+              <div className="absolute -bottom-14 left-1/2 -translate-x-1/2 font-expanded text-[0.625rem] tracking-[0.4em] text-green-300/80 uppercase">Mortal</div>
+              <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 font-expanded text-[0.625rem] tracking-[0.4em] text-emerald-300/80 uppercase transform -rotate-90">Celestial</div>
+              <div className="absolute right-1/2 translate-x-1/2 top-1/2 -translate-y-1/2 font-expanded text-[0.625rem] tracking-[0.4em] text-green-300/80 uppercase transform rotate-90">Terrestrial</div>
             </div>
             
-            {/* Subtle Vignette */}
-            <div className="absolute inset-0 shadow-[inset_0_0_150px_rgba(4,28,28,0.8)] pointer-events-none"></div>
+            {/* Majestic Aura Trails */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400/50 rounded-full animate-ping shadow-[0_0_15px_rgba(52,211,153,0.7)]"></div>
+              <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-green-400/50 rounded-full animate-ping animation-delay-1000 shadow-[0_0_15px_rgba(74,222,128,0.7)]"></div>
+              <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-teal-400/50 rounded-full animate-ping animation-delay-2000 shadow-[0_0_15px_rgba(20,184,166,0.7)]"></div>
+              <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-emerald-400/50 rounded-full animate-ping animation-delay-3000 shadow-[0_0_15px_rgba(52,211,153,0.7)]"></div>
+            </div>
+            
+            {/* Regal Vignette */}
+            <div className="absolute inset-0 shadow-[inset_0_0_150px_rgba(15,23,42,0.8)] pointer-events-none"></div>
           </div>
 
         </div>
