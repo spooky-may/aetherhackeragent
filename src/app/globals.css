@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: #ffe6cb;
+  color: #041C1C;
+  font-family: var(--font-cormorant-garamond);
+  antialiased: true;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(27, 49, 37, 0.1); 
+  border-left: 1px solid rgba(23, 162, 162, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(27, 49, 37, 0.6); 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6); /* divine-gold */
+}
+
+/* Ambient Grain/Noise - Adjusted for light background */
+.bg-noise {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+}
+
+/* Medieval ornamental borders */
+.ornamental-border {
+  border: 1px solid rgba(23, 162, 162, 0.6);
+  position: relative;
+}
+
+.ornamental-border::before,
+.ornamental-border::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #17a2a2;
+}
+
+.ornamental-border::before {
+  top: -2px;
+  left: -2px;
+}
+
+.ornamental-border::after {
+  bottom: -2px;
+  right: -2px;
+}
+
+/* Halo effect */
+.halo-glow {
+  position: relative;
+}
+
+.halo-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  background: radial-gradient(ellipse at center, rgba(23, 162, 162, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.halo-glow:hover::before {
+  opacity: 1;
+}
+
+/* Terminal styling */
+.terminal {
+  background: rgba(4, 28, 28, 0.85); 
+  border: 4px double #041C1C;
+  color: #00dd66;
+  font-family: var(--font-fira-code);
+  padding: 16px;
+  overflow-y: auto;
+  max-height: 400px;
+  text-shadow: 0 0 4px rgba(0, 221, 102, 0.4);
+}
+
+.terminal-line {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  margin: 0 2px;
+  background: #b74a9e;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    to right,
+    #041C1C 20%,
+    #17a2a2 40%,
+    #b74a9e 60%,
+    #041C1C 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+/* Page Transition Animations */
+@keyframes mystic-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-mystic-reveal {
+  animation: mystic-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Smooth transitions */
+@layer components {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .skill-card {
+    @apply p-8 border-b border-r border-accent-teal/40 bg-white/20 hover:bg-white/40 transition-smooth relative;
+  }
+
+  .btn-divine {
+    @apply px-6 py-3 border border-godteal text-parchment bg-godteal font-sans uppercase text-[0.6875rem] tracking-[0.1875rem] transition-smooth cursor-pointer;
+  }
+  .btn-divine:hover {
+    @apply bg-opacity-90;
+    box-shadow: 0 0 16px 2px rgba(27, 49, 37, 0.4);
+  }
+}
+
+/* Mystic Embers Particle System */
+@keyframes float-ember {
+  0% {
+    transform: translate(calc(var(--mouse-x, 0px) * 0.1), 10vh);
+    opacity: 0;
+  }
+  20% {
+    opacity: var(--ember-opacity);
+  }
+  80% {
+    opacity: var(--ember-opacity);
+  }
+  100% {
+    transform: translate(calc(var(--ember-drift) + (var(--mouse-x, 0px) * 0.5)), -110vh);
+    opacity: 0;
+  }
+}
+
+.animate-ember {
+  animation: float-ember linear infinite;
+  box-shadow: 0 0 16px 3px currentColor; /* Increased glow */
+  transition: transform 0.5s ease-out;
+}
