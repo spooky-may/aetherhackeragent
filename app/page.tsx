@@ -37,6 +37,98 @@ export default function Home() {
         </div>
       </div>
 
+      {/* The Digital Archon (Role & Technical Arsenal) */}
+      <div className="w-full border-b border-accent-teal/40 bg-white/5 overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          
+          {/* Left Column: The Sovereign Role */}
+          <div className="p-8 lg:p-20 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-accent-teal/40 bg-gradient-to-br from-accent-teal/5 to-transparent relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-teal/40 to-transparent"></div>
+            
+            <small className="font-sans text-[0.6875rem] tracking-[0.3em] uppercase font-bold text-accent-teal mb-6 block">
+              Designation: Aether Archon
+            </small>
+            
+            <h2 className="font-expanded text-3xl md:text-5xl font-bold text-godteal mb-10 leading-[1.1]">
+              The Sovereign Architect of<br />Autonomous Security.
+            </h2>
+            
+            <div className="space-y-8 relative">
+              <div className="absolute -left-6 top-0 bottom-0 w-px bg-accent-teal/20"></div>
+              
+              <p className="font-mondwest text-xl md:text-2xl text-godteal leading-relaxed">
+                Aether Hacker stands as the <span className="text-accent-teal font-bold italic">Digital Archon</span> of your infrastructure—a sovereign autonomous agent that transcends the limitations of traditional command-line scripts. It commands a curated arsenal of <span className="font-bold border-b border-accent-teal/30">183 enterprise-grade security skills</span>, systematically organized across eight sacred disciplines: from deep Information Gathering and Vulnerability Scanning to surgical Exploitation and Post-Exploit rituals.
+              </p>
+              
+              <p className="font-mondwest text-xl md:text-2xl text-godteal leading-relaxed">
+                Through the alchemy of <span className="italic">Smart Provisioning</span>, the agent distills complex objectives into precision-driven execution pipelines. It dispatches specialized sub-agents into hardened namespaces, manifesting parallel execution with zero context cost and maintaining an eternal 24/7 watch over your digital realms.
+              </p>
+            </div>
+            
+            <div className="mt-16 grid grid-cols-2 gap-12 pt-12 border-t border-accent-teal/20">
+              <div className="group">
+                <div className="font-sans text-[0.625rem] tracking-[0.25em] uppercase font-bold text-accent-teal mb-3 flex items-center gap-2">
+                  <span className="w-8 h-px bg-accent-teal/40"></span> Technical Scale
+                </div>
+                <div className="font-expanded text-3xl font-bold text-godteal group-hover:text-accent-teal transition-colors">183 Skills</div>
+                <div className="text-[0.75rem] font-mondwest opacity-60 uppercase tracking-widest mt-1">Vetted & Deployable</div>
+              </div>
+              <div className="group">
+                <div className="font-sans text-[0.625rem] tracking-[0.25em] uppercase font-bold text-accent-teal mb-3 flex items-center gap-2">
+                  <span className="w-8 h-px bg-accent-teal/40"></span> Operational Reach
+                </div>
+                <div className="font-expanded text-3xl font-bold text-godteal group-hover:text-accent-teal transition-colors">8 Disciplines</div>
+                <div className="text-[0.75rem] font-mondwest opacity-60 uppercase tracking-widest mt-1">Full-Spectrum Auditing</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Aesthetic Manifestation */}
+          <div className="relative min-h-[500px] lg:min-h-full flex items-center justify-center bg-godteal group overflow-hidden">
+            {/* Ambient Background Layer */}
+            <div className="absolute inset-0 bg-[url('/logo.jpeg')] bg-cover bg-center opacity-20 grayscale brightness-50 scale-110 group-hover:scale-105 transition-transform duration-[4s] ease-out"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-godteal via-godteal/80 to-transparent"></div>
+            
+            {/* The Artifact Core */}
+            <div className="relative w-80 h-80 md:w-[450px] md:h-[450px] z-10 flex items-center justify-center">
+              
+              {/* Ornamental Outer Ring */}
+              <div className="absolute inset-0 border border-accent-teal/20 rounded-full scale-110 group-hover:scale-100 transition-transform duration-1000"></div>
+              <div className="absolute inset-4 border border-accent-teal/10 rounded-full animate-[spin_30s_linear_infinite]"></div>
+              
+              {/* Corner Brackets (Mystical Frame) */}
+              <div className="absolute -top-6 -left-6 w-16 h-16 border-t border-l border-accent-teal/60 opacity-40 group-hover:opacity-100 group-hover:w-20 group-hover:h-20 transition-all duration-700"></div>
+              <div className="absolute -top-6 -right-6 w-16 h-16 border-t border-r border-accent-teal/60 opacity-40 group-hover:opacity-100 group-hover:w-20 group-hover:h-20 transition-all duration-700"></div>
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 border-b border-l border-accent-teal/60 opacity-40 group-hover:opacity-100 group-hover:w-20 group-hover:h-20 transition-all duration-700"></div>
+              <div className="absolute -bottom-6 -right-6 w-16 h-16 border-b border-r border-accent-teal/60 opacity-40 group-hover:opacity-100 group-hover:w-20 group-hover:h-20 transition-all duration-700"></div>
+              
+              {/* Inner Divine Glow */}
+              <div className="absolute inset-0 rounded-full bg-accent-teal/15 blur-[80px] group-hover:bg-accent-teal/25 transition-colors duration-1000"></div>
+              
+              {/* The Manifestation Frame */}
+              <div className="w-full h-full rounded-full border border-accent-teal/40 p-4 relative z-20 overflow-hidden shadow-[0_0_100px_rgba(23,162,162,0.2)] bg-godteal/50 backdrop-blur-sm">
+                <img 
+                  src="/logo.jpeg" 
+                  alt="Aether Archon Manifestation" 
+                  className="w-full h-full object-cover grayscale-[0.5] sepia-[0.1] brightness-90 group-hover:grayscale-0 group-hover:brightness-110 transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100"
+                />
+                
+                {/* Overlay Scanning Effect */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-teal/10 to-transparent h-[200%] -translate-y-full group-hover:translate-y-full transition-transform duration-[3s] pointer-events-none"></div>
+              </div>
+              
+              {/* Compass Elements */}
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 font-expanded text-[0.625rem] tracking-[0.4em] text-accent-teal/60 uppercase">North</div>
+              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 font-expanded text-[0.625rem] tracking-[0.4em] text-accent-teal/60 uppercase">South</div>
+            </div>
+            
+            {/* Subtle Vignette */}
+            <div className="absolute inset-0 shadow-[inset_0_0_150px_rgba(4,28,28,0.8)] pointer-events-none"></div>
+          </div>
+
+        </div>
+      </div>
+
       {/* Promotional Features Grid */}
       <div className="w-full">
         <div className="p-6 border-b border-accent-teal/40 bg-white/20">
