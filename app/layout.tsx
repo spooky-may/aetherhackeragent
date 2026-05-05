@@ -24,6 +24,9 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: 'Aether Hacker Agent — Divine Security Toolkit',
   description: 'A mystical, agent-driven security toolkit inspired by Greek goddess mythology.',
+  icons: {
+    icon: '/logo.jpeg',
+  },
 };
 
 export default function RootLayout({
