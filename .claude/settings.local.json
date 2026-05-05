@@ -6,7 +6,15 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(git restore *)",
-      "WebFetch(domain:localhost)"
+      "WebFetch(domain:localhost)",
+      "Bash(node -e \"const fs = require\\('fs'\\); try { JSON.parse\\(fs.readFileSync\\('./lib/skills.json', 'utf8'\\)\\); console.log\\('Valid'\\); } catch\\(e\\) { console.log\\('Error at line:', e.message\\); }\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); const content = fs.readFileSync\\('./lib/skills.json', 'utf8'\\); console.log\\(content.substring\\(10000, 10050\\)\\);\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); const content = fs.readFileSync\\('./lib/skills.json', 'utf8'\\); const idx = content.indexOf\\('\\\\\"download_script\\\\\"'\\); const section = content.substring\\(idx, idx + 500\\); console.log\\(section\\);\")",
+      "Bash(node)",
+      "Bash(node -e \"const fs = require\\('fs'\\); try { JSON.parse\\(fs.readFileSync\\('./lib/skills.json', 'utf8'\\)\\); console.log\\('✓ JSON is now valid'\\); } catch\\(e\\) { console.log\\('Still invalid:', e.message\\); }\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); const content = fs.readFileSync\\('./lib/skills.json', 'utf8'\\); const idx = content.indexOf\\('Simulating'\\); console.log\\(content.substring\\(idx - 50, idx + 150\\)\\);\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); try { JSON.parse\\(fs.readFileSync\\('./lib/skills.json', 'utf8'\\)\\); console.log\\('✓ JSON is valid!'\\); } catch\\(e\\) { console.log\\('Invalid:', e.message\\); }\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); const content = fs.readFileSync\\('./lib/skills.json', 'utf8'\\); console.log\\('Char at 10006:', JSON.stringify\\(content[10006]\\)\\); console.log\\('Context:', JSON.stringify\\(content.substring\\(10000, 10020\\)\\)\\);\")"
     ]
   }
 }
