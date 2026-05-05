@@ -58,9 +58,6 @@ export default function Home() {
           <Link href="/catalog" className="btn-divine shadow-lg px-8">
             Access the Hacker Arsenal
           </Link>
-          <a href="#" className="px-6 py-3 border border-accent-teal/40 text-godteal font-sans uppercase text-[0.6875rem] tracking-[0.1875rem] hover:bg-accent-teal/10 transition-smooth cursor-pointer bg-white/30">
-            Deploy Local Node
-          </a>
         </div>
       </div>
 
