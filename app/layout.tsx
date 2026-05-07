@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Cinzel_Decorative, Cormorant_Garamond, Fira_Code } from 'next/font/google';
 import Link from 'next/link';
+import { Github, Twitter } from 'lucide-react';
 import MysticEmbers from './components/MysticEmbers';
 import './globals.css';
 
@@ -78,9 +79,17 @@ export default function RootLayout({
               </div>
               <h2 className="font-expanded text-xl tracking-widest text-godteal uppercase font-bold group-hover:text-accent-teal transition-colors">Aether Agent</h2>
             </Link>
-            <div className="flex gap-8">
+            <div className="flex items-center gap-8">
               <Link href="/catalog" className="font-sans text-[0.6875rem] tracking-[0.1875rem] uppercase opacity-80 hover:opacity-100 text-godteal font-bold transition-opacity">Grimoire (Skills)</Link>
               <Link href="/docs" className="font-sans text-[0.6875rem] tracking-[0.1875rem] uppercase opacity-80 hover:opacity-100 text-godteal font-bold transition-opacity">Docs</Link>
+              <div className="flex items-center gap-4 border-l border-accent-teal/20 pl-8">
+                <a href="https://x.com/Aetheragentt" target="_blank" rel="noopener noreferrer" className="text-godteal/60 hover:text-accent-teal transition-colors">
+                  <Twitter size={18} />
+                </a>
+                <a href="https://github.com/spooky-may/aetherhackeragent" target="_blank" rel="noopener noreferrer" className="text-godteal/60 hover:text-accent-teal transition-colors">
+                  <Github size={18} />
+                </a>
+              </div>
             </div>
           </header>
 

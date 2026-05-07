@@ -142,5 +142,11 @@ npm run dev
 
 *Requires Node.js 20+ and a compatible package manager.*
 
+## Contract Address
+
+`[TBD]`
+
 ---
 *© 2026 Divine Protocols. Licensed under MIT.*
+
+[X (Twitter)](https://x.com/Aetheragentt)
