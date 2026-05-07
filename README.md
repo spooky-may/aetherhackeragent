@@ -1,5 +1,8 @@
 ![Aether Banner](public/aether-banner.jpeg)
 
+**Contract Address**: `[TBD]`  
+**X (Twitter)**: [https://x.com/Aetheragentt](https://x.com/Aetheragentt)
+
 # AETHER HACKER AGENT
 
 **Aether Hacker Agent** is a cutting-edge, autonomous cybersecurity infrastructure orchestrator. Inspired by ancient divine architecture, it provides an agentic runtime for executing, managing, and chaining complex security payloads within isolated, hardened namespaces. 
@@ -142,11 +145,5 @@ npm run dev
 
 *Requires Node.js 20+ and a compatible package manager.*
 
-## Contract Address
-
-`[TBD]`
-
 ---
 *© 2026 Divine Protocols. Licensed under MIT.*
-
-[X (Twitter)](https://x.com/Aetheragentt)
