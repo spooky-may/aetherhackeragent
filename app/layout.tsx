@@ -80,7 +80,7 @@ export default function RootLayout({
             </Link>
             <div className="flex gap-8">
               <Link href="/catalog" className="font-sans text-[0.6875rem] tracking-[0.1875rem] uppercase opacity-80 hover:opacity-100 text-godteal font-bold transition-opacity">Grimoire (Skills)</Link>
-              <a href="#" className="font-sans text-[0.6875rem] tracking-[0.1875rem] uppercase opacity-60 hover:opacity-100 transition-opacity">Docs</a>
+              <Link href="/docs" className="font-sans text-[0.6875rem] tracking-[0.1875rem] uppercase opacity-80 hover:opacity-100 text-godteal font-bold transition-opacity">Docs</Link>
             </div>
           </header>
 
