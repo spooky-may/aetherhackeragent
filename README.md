@@ -1,3 +1,5 @@
+![Aether Banner](public/aether-banner.jpeg)
+
 # AETHER HACKER AGENT
 
 **Aether Hacker Agent** is a cutting-edge, autonomous cybersecurity infrastructure orchestrator. Inspired by ancient divine architecture, it provides an agentic runtime for executing, managing, and chaining complex security payloads within isolated, hardened namespaces. 
