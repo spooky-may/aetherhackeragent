@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export interface SkillOverview {
@@ -82,7 +81,9 @@ export default function SkillCard({ skill }: SkillCardProps) {
 
         <div className="mt-4 pt-4 border-t border-goddess flex items-center justify-between text-accent-teal group-hover:text-divine-green transition-colors font-bold label-text text-sm relative z-10">
           <span>View Details</span>
-          <ArrowRight size={16} />
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
         </div>
       </div>
       <span className="absolute inset-1 bg-accent-teal pointer-events-none transition-opacity duration-250 group-hover:opacity-[0.05] opacity-0"></span>

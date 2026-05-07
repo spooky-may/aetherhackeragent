@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Sparkles, Zap, Shield, Cpu, ChevronRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -29,7 +28,7 @@ export default function Home() {
             <span className="font-bold text-accent-teal">Aether Hacker is an autonomous AI agent</span> designed to provide hackers, penetration testers, and security professionals with a <span className="font-bold text-accent-teal">constantly-evolving arsenal of tools and skills</span>.
           </p>
           <p className="text-lg font-mondwest leading-relaxed opacity-85 text-godteal">
-            Whether you need network reconnaissance, vulnerability scanning, exploitation, post-exploitation, or malware analysis—the agent understands your use case and delivers the exact tools you need. No bloat. No unnecessary features. Just substance: ready-to-execute scripts, automated workflows, and specialized security capabilities organized by purpose and capability level.
+            Whether you need network reconnaissance, vulnerability scanning, exploitation, post-exploitation, or malware analysis—the agent understands your use case and delivers the exact tools you need. No bloat. No guessing. Just substance: ready-to-execute scripts, automated workflows, and specialized security capabilities organized by purpose and capability level.
           </p>
         </div>
         <div className="flex gap-6 mt-6">
@@ -66,28 +65,44 @@ export default function Home() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                 <div className="flex gap-4 p-6 bg-white/30 border border-accent-teal/20 shadow-sm">
-                  <div className="mt-1 text-divine-green"><Zap size={24} /></div>
+                  <div className="mt-1 text-divine-green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 14.5 12 3v9h8L12 21v-9H4z"/>
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-expanded font-bold mb-2 uppercase text-sm text-godteal">Ready-to-Execute Tools</h4>
                     <p className="text-sm text-godteal/70">Every tool comes with deployment scripts, pre-configured payloads, and execution examples.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 p-6 bg-white/30 border border-accent-teal/20 shadow-sm">
-                  <div className="mt-1 text-divine-green"><Shield size={24} /></div>
+                  <div className="mt-1 text-divine-green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-expanded font-bold mb-2 uppercase text-sm text-godteal">Purpose-Driven Skills</h4>
                     <p className="text-sm text-godteal/70">Tools organized by use case: reconnaissance, scanning, exploitation, post-exploitation, analysis.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 p-6 bg-white/30 border border-accent-teal/20 shadow-sm">
-                  <div className="mt-1 text-divine-green"><Cpu size={24} /></div>
+                  <div className="mt-1 text-divine-green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="16" height="16" x="4" y="4" rx="2"/><path d="M9 9h6v6H9z"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/>
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-expanded font-bold mb-2 uppercase text-sm text-godteal">Autonomous Execution</h4>
                     <p className="text-sm text-godteal/70">Dispatch the agent to run tools autonomously or delegate to specialized sub-agents for parallel workflows.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 p-6 bg-white/30 border border-accent-teal/20 shadow-sm">
-                  <div className="mt-1 text-divine-green"><Sparkles size={24} /></div>
+                  <div className="mt-1 text-divine-green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-expanded font-bold mb-2 uppercase text-sm text-godteal">Living Arsenal</h4>
                     <p className="text-sm text-godteal/70">A constantly-growing Grimoire of enterprise-grade security tools, regularly updated with emerging techniques.</p>
@@ -230,7 +245,9 @@ export default function Home() {
           <div className="mt-20 text-center">
             <Link href="/catalog" className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-divine-green to-accent-teal text-white font-bold font-expanded uppercase text-sm tracking-wider hover:shadow-2xl transition-all duration-300 border border-divine-green/80 hover:border-divine-green">
               Browse 183 Skills in the Grimoire
-              <ChevronRight size={20} />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
             </Link>
           </div>
         </div>
@@ -326,7 +343,9 @@ export default function Home() {
       <div className="p-16 text-center border-t border-accent-teal/20 mt-12 bg-accent-teal/5">
         <Link href="/catalog" className="inline-flex items-center gap-2 font-sans text-[1.125rem] tracking-[0.1875rem] uppercase text-godteal font-bold hover:text-accent-teal transition-colors group">
           Explore the Grimoire of Skills
-          <ChevronRight className="group-hover:translate-x-2 transition-transform" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-2 transition-transform">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
         </Link>
       </div>
 
