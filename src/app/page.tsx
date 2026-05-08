@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import ContractAddress from './components/ContractAddress';
 
 export default function Home() {
   return (
@@ -40,6 +41,8 @@ export default function Home() {
           </a>
         </div>
       </div>
+
+      <ContractAddress />
 
       {/* THE AGENT'S TOOLKIT SECTION */}
       <section className="w-full py-24 border-b border-accent-teal/40 bg-white/40 overflow-hidden relative">

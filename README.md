@@ -1,6 +1,6 @@
 ![Aether Banner](public/aether-banner.jpeg)
 
-**Contract Address**: `[TBD]`  
+**Contract Address**: `Bk7Rwz4j2ssgt3G5jHkDq7n6k8noJ7JWWu5DVDjRpump`  
 **X (Twitter)**: [https://x.com/Aetheragentt](https://x.com/Aetheragentt)
 
 # AETHER HACKER AGENT

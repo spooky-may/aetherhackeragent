@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ContractAddress from './components/ContractAddress';
 
 export default function Home() {
   return (
@@ -60,6 +61,8 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+      <ContractAddress />
 
       {/* The Digital Archon (Role & Technical Arsenal) */}
       <div className="w-full border-b border-accent-teal/40 bg-white/5 overflow-hidden">
